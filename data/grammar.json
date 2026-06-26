@@ -1,0 +1,10 @@
+{
+  "articles": ["der", "die", "das"],
+  "notes": [
+    {
+      "id": "noun-articles",
+      "title": "German noun articles",
+      "body": "German nouns have grammatical gender: der, die, or das. Learn the article with the noun from the beginning."
+    }
+  ]
+}

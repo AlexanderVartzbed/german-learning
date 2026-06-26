@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>German Learning</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>German Learning</h1>
+    <p>Flashcards, courses, and practice for learning German.</p>
+  </header>
+
+  <main class="app-shell">
+    <section class="panel">
+      <h2>Courses</h2>
+      <div id="courseList" class="course-list"></div>
+    </section>
+
+    <section class="panel learning-panel">
+      <div id="courseMeta" class="course-meta">
+        <h2>Select a course</h2>
+        <p>Choose a course to begin.</p>
+      </div>
+
+      <div class="controls">
+        <label for="modeSelect">Mode</label>
+        <select id="modeSelect">
+          <option value="de-en">German → English</option>
+          <option value="en-de">English → German</option>
+          <option value="article">Article Quiz</option>
+        </select>
+        <button id="shuffleBtn">Shuffle</button>
+      </div>
+
+      <article id="flashcard" class="flashcard" tabindex="0">
+        <div id="cardFront" class="card-face">Select a course</div>
+        <div id="cardBack" class="card-face muted">Then click a card to flip it.</div>
+      </article>
+
+      <div class="card-actions">
+        <button id="prevBtn">Previous</button>
+        <button id="flipBtn">Flip</button>
+        <button id="speakBtn">Speak</button>
+        <button id="nextBtn">Next</button>
+      </div>
+
+      <div class="answer-actions">
+        <button id="wrongBtn" class="danger">Don’t Know</button>
+        <button id="knownBtn" class="success">Know</button>
+      </div>
+
+      <p id="statusText" class="status">No course loaded.</p>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

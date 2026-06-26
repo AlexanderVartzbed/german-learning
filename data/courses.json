@@ -1,0 +1,20 @@
+[
+  {
+    "id": "animals-01",
+    "title": "Animals 1",
+    "description": "Basic animal vocabulary.",
+    "wordIds": [1001, 1002, 1003]
+  },
+  {
+    "id": "food-01",
+    "title": "Food 1",
+    "description": "Starter food and drink words.",
+    "wordIds": [1004, 1005, 1006, 1007]
+  },
+  {
+    "id": "greetings-01",
+    "title": "Greetings 1",
+    "description": "Simple starter greetings.",
+    "wordIds": [1008]
+  }
+]

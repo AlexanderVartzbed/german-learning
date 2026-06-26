@@ -1,0 +1,150 @@
+:root {
+  --bg: #f7f4ee;
+  --panel: #ffffff;
+  --text: #1f2933;
+  --muted: #697586;
+  --border: #e4e0d8;
+  --accent: #1d4ed8;
+  --danger: #b42318;
+  --success: #027a48;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button, select {
+  font: inherit;
+}
+
+button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: white;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+}
+
+button:hover { border-color: var(--accent); }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.app-header {
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.app-header p {
+  color: var(--muted);
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.course-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.course-button {
+  width: 100%;
+  text-align: left;
+  border-radius: 16px;
+}
+
+.course-button strong {
+  display: block;
+}
+
+.course-button span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.course-button.active {
+  border-color: var(--accent);
+  background: #eff6ff;
+}
+
+.learning-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.course-meta h2, .course-meta p {
+  margin: 0.25rem 0;
+}
+
+.controls, .card-actions, .answer-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+select {
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: white;
+}
+
+.flashcard {
+  min-height: 280px;
+  border: 2px solid var(--border);
+  border-radius: 28px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 2rem;
+  cursor: pointer;
+  background: linear-gradient(180deg, #ffffff, #fbfaf7);
+}
+
+.card-face:first-child {
+  font-size: clamp(2rem, 7vw, 5rem);
+  font-weight: 800;
+}
+
+.card-face:last-child {
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  margin-top: 1rem;
+}
+
+.muted, .status {
+  color: var(--muted);
+}
+
+.danger { color: var(--danger); }
+.success { color: var(--success); }
+
+@media (max-width: 760px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+}

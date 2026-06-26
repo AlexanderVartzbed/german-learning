@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1001,
+    "type": "noun",
+    "word": "Hund",
+    "article": "der",
+    "plural": "Hunde",
+    "english": "dog",
+    "level": "A1",
+    "tags": ["animals", "pets"]
+  },
+  {
+    "id": 1002,
+    "type": "noun",
+    "word": "Katze",
+    "article": "die",
+    "plural": "Katzen",
+    "english": "cat",
+    "level": "A1",
+    "tags": ["animals", "pets"]
+  },
+  {
+    "id": 1003,
+    "type": "noun",
+    "word": "Vogel",
+    "article": "der",
+    "plural": "Vögel",
+    "english": "bird",
+    "level": "A1",
+    "tags": ["animals"]
+  },
+  {
+    "id": 1004,
+    "type": "noun",
+    "word": "Brot",
+    "article": "das",
+    "plural": "Brote",
+    "english": "bread",
+    "level": "A1",
+    "tags": ["food"]
+  },
+  {
+    "id": 1005,
+    "type": "noun",
+    "word": "Wasser",
+    "article": "das",
+    "plural": null,
+    "english": "water",
+    "level": "A1",
+    "tags": ["food", "drink"]
+  },
+  {
+    "id": 1006,
+    "type": "verb",
+    "word": "essen",
+    "english": "to eat",
+    "level": "A1",
+    "tags": ["verbs", "food"]
+  },
+  {
+    "id": 1007,
+    "type": "verb",
+    "word": "trinken",
+    "english": "to drink",
+    "level": "A1",
+    "tags": ["verbs", "drink"]
+  },
+  {
+    "id": 1008,
+    "type": "phrase",
+    "word": "Guten Morgen",
+    "english": "Good morning",
+    "level": "A1",
+    "tags": ["greetings"]
+  }
+]
