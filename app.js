@@ -7,9 +7,13 @@ const state = {
   currentIndex: 0,
   currentMode: "de-en",
   answerVisible: false,
+
   knownIds: new Set(),
   reviewIds: new Set(),
   sessionReviewIds: new Set(),
+
+  courseProgress: {},
+
   lastCourseId: null,
   lastMode: "de-en"
 };
@@ -31,6 +35,7 @@ const els = {
   continueBtn: document.getElementById("continueBtn"),
 
   startTodayBtn: document.getElementById("startTodayBtn"),
+  startTodayMeta: document.getElementById("startTodayMeta"),
   reviewMistakesBtn: document.getElementById("reviewMistakesBtn"),
   reviewMistakesMeta: document.getElementById("reviewMistakesMeta"),
   browseCoursesBtn: document.getElementById("browseCoursesBtn"),
@@ -46,6 +51,8 @@ const els = {
   courseDescription: document.getElementById("courseDescription"),
   courseMeta: document.getElementById("courseMeta"),
   courseLevel: document.getElementById("courseLevel"),
+  courseDetailProgressBar: document.getElementById("courseDetailProgressBar"),
+  courseDetailProgressText: document.getElementById("courseDetailProgressText"),
   backToCoursesBtn: document.getElementById("backToCoursesBtn"),
 
   cardCounter: document.getElementById("cardCounter"),
@@ -75,11 +82,7 @@ async function init() {
     ]);
 
     state.dictionary = dictionary;
-    state.courses = [...courses].sort((a, b) => {
-      const groupSort = (a.group || "").localeCompare(b.group || "");
-      if (groupSort !== 0) return groupSort;
-      return (a.order || 999) - (b.order || 999);
-    });
+    state.courses = [...courses].sort(sortCourses);
 
     loadProgress();
     bindEvents();
@@ -95,6 +98,12 @@ async function fetchJson(path) {
   const response = await fetch(path);
   if (!response.ok) throw new Error(`Failed to load ${path}`);
   return response.json();
+}
+
+function sortCourses(a, b) {
+  const groupSort = (a.group || "").localeCompare(b.group || "");
+  if (groupSort !== 0) return groupSort;
+  return (a.order || 999) - (b.order || 999);
 }
 
 function bindEvents() {
@@ -142,7 +151,7 @@ function showScreen(screen) {
     renderBrowse();
     els.browseScreen.classList.add("active");
     els.homeBtn.classList.remove("hidden");
-    els.subtitle.textContent = "Browse only when you need to.";
+    els.subtitle.textContent = "Progress by course.";
   }
 
   if (screen === "course") {
@@ -159,6 +168,7 @@ function showScreen(screen) {
   }
 
   if (screen === "complete") {
+    markCourseCompletedIfNeeded();
     renderCompleteScreen();
     els.completeScreen.classList.add("active");
     els.homeBtn.classList.remove("hidden");
@@ -169,6 +179,7 @@ function showScreen(screen) {
 function renderHome() {
   renderContinuePanel();
   renderReviewButton();
+  renderStartTodayButton();
 }
 
 function renderBrowse() {
@@ -182,15 +193,19 @@ function renderContinuePanel() {
     return;
   }
 
-  const course = state.courses.find((item) => item.id === state.lastCourseId);
+  const course = getCourseById(state.lastCourseId);
 
   if (!course) {
     els.continuePanel.classList.add("hidden");
     return;
   }
 
+  const progress = getCourseProgress(course);
+
   els.continueTitle.textContent = course.title;
-  els.continueMeta.textContent = `${course.level || "A1"} · ${course.wordIds.length} cards · ${getModeLabel(state.lastMode)}`;
+  els.continueMeta.textContent =
+    `${progress.statusLabel} · ${progress.knownCount}/${progress.total} known · ${getModeLabel(state.lastMode)}`;
+
   els.continuePanel.classList.remove("hidden");
 }
 
@@ -204,6 +219,18 @@ function renderReviewButton() {
 
   els.reviewMistakesMeta.textContent = `${count} card${count === 1 ? "" : "s"} waiting`;
   els.reviewMistakesBtn.classList.remove("hidden");
+}
+
+function renderStartTodayButton() {
+  const course = getStartTodayCourse();
+
+  if (!course) {
+    els.startTodayMeta.textContent = "All recommended lessons complete";
+    return;
+  }
+
+  const progress = getCourseProgress(course);
+  els.startTodayMeta.textContent = `${course.title} · ${progress.statusLabel}`;
 }
 
 function renderGroupChips() {
@@ -237,45 +264,143 @@ function renderCourseList() {
   els.courseCount.textContent = `${courses.length}`;
   els.courseList.innerHTML = "";
 
-  courses.forEach((course) => {
-    els.courseList.appendChild(createCourseRow(course));
+  const grouped = groupCourses(courses);
+
+  Object.entries(grouped).forEach(([group, groupCoursesList]) => {
+    if (state.activeGroup === "All") {
+      const heading = document.createElement("div");
+      heading.className = "section-heading";
+      heading.innerHTML = `<h2>${group}</h2><span>${groupCoursesList.length}</span>`;
+      els.courseList.appendChild(heading);
+    }
+
+    groupCoursesList.forEach((course) => {
+      els.courseList.appendChild(createCourseRow(course));
+    });
   });
+}
+
+function groupCourses(courses) {
+  return courses.reduce((groups, course) => {
+    const group = course.group || "Other";
+    if (!groups[group]) groups[group] = [];
+    groups[group].push(course);
+    return groups;
+  }, {});
 }
 
 function createCourseRow(course) {
   const button = document.createElement("button");
-  const count = course.wordIds.length;
+  const progress = getCourseProgress(course);
 
   button.className = "course-row";
   button.innerHTML = `
-    <div>
-      <strong>${course.title}</strong>
-      <span>${course.group || "Course"} · ${count} cards</span>
+    <div class="course-row-top">
+      <div>
+        <strong>${course.title}</strong>
+        <span>${course.group || "Course"} · ${course.wordIds.length} cards</span>
+      </div>
+      <span class="mini-pill ${progress.statusClass}">${progress.statusLabel}</span>
     </div>
-    <span class="mini-pill">${course.level || "A1"}</span>
+
+    <div class="course-row-progress">
+      <div class="progress-track">
+        <div class="progress-fill" style="width: ${progress.percent}%"></div>
+      </div>
+      <div class="course-row-progress-meta">
+        <span>${progress.knownCount}/${progress.total} known</span>
+        <span>${progress.reviewCount} review</span>
+      </div>
+    </div>
   `;
 
   button.addEventListener("click", () => openCourse(course.id));
-
   return button;
+}
+
+function getCourseProgress(course) {
+  const total = course.wordIds.length;
+  const knownCount = course.wordIds.filter((id) => state.knownIds.has(id)).length;
+  const reviewCount = course.wordIds.filter((id) => state.reviewIds.has(id)).length;
+  const percent = total ? Math.round((knownCount / total) * 100) : 0;
+
+  let statusLabel = "Not Started";
+  let statusClass = "status-not-started";
+
+  if (knownCount === total && total > 0 && reviewCount === 0) {
+    statusLabel = "Complete";
+    statusClass = "status-complete";
+  } else if (reviewCount > 0) {
+    statusLabel = "Needs Review";
+    statusClass = "status-needs-review";
+  } else if (knownCount > 0 || isCourseStarted(course.id)) {
+    statusLabel = "In Progress";
+    statusClass = "status-in-progress";
+  }
+
+  return {
+    total,
+    knownCount,
+    reviewCount,
+    percent,
+    statusLabel,
+    statusClass
+  };
+}
+
+function isCourseStarted(courseId) {
+  return Boolean(state.courseProgress[courseId]?.started);
+}
+
+function ensureCourseProgress(courseId) {
+  if (!courseId) return null;
+
+  if (!state.courseProgress[courseId]) {
+    state.courseProgress[courseId] = {
+      started: false,
+      completed: false,
+      lastMode: "de-en",
+      lastIndex: 0,
+      completedAt: null
+    };
+  }
+
+  return state.courseProgress[courseId];
 }
 
 function continueLastCourse() {
   if (!state.lastCourseId) return;
 
-  openCourse(state.lastCourseId);
-  startPractice(state.lastMode || "de-en");
+  const course = getCourseById(state.lastCourseId);
+  if (!course) return;
+
+  openCourse(course.id, { showCourseScreen: false });
+
+  const progress = ensureCourseProgress(course.id);
+  state.currentMode = progress.lastMode || state.lastMode || "de-en";
+  state.currentIndex = clampIndex(progress.lastIndex || 0, state.currentCards.length);
+  state.answerVisible = false;
+  state.sessionReviewIds = new Set();
+
+  showScreen("practice");
+  renderCard();
 }
 
 function startToday() {
-  const recommended =
-    state.courses.find((course) => course.recommended) ||
-    state.courses[0];
+  const course = getStartTodayCourse();
 
-  if (!recommended) return;
+  if (!course) return;
 
-  openCourse(recommended.id);
+  openCourse(course.id, { showCourseScreen: false });
   startPractice("de-en");
+}
+
+function getStartTodayCourse() {
+  return (
+    state.courses.find((course) => course.recommended && getCourseProgress(course).statusLabel !== "Complete") ||
+    state.courses.find((course) => getCourseProgress(course).statusLabel !== "Complete") ||
+    state.courses[0]
+  );
 }
 
 function startMistakeReview() {
@@ -291,7 +416,8 @@ function startMistakeReview() {
     group: "Review",
     level: "Practice",
     description: "Cards marked for review.",
-    wordIds: reviewCards.map((card) => card.id)
+    wordIds: reviewCards.map((card) => card.id),
+    temporary: true
   };
 
   state.currentCards = reviewCards;
@@ -304,8 +430,9 @@ function startMistakeReview() {
   renderCard();
 }
 
-function openCourse(courseId) {
-  const course = state.courses.find((item) => item.id === courseId);
+function openCourse(courseId, options = {}) {
+  const { showCourseScreen = true } = options;
+  const course = getCourseById(courseId);
   if (!course) return;
 
   state.currentCourse = course;
@@ -313,24 +440,39 @@ function openCourse(courseId) {
     .map((id) => state.dictionary.find((entry) => entry.id === id))
     .filter(Boolean);
 
-  state.currentIndex = 0;
+  const progress = ensureCourseProgress(course.id);
+
+  state.currentIndex = clampIndex(progress.lastIndex || 0, state.currentCards.length);
   state.answerVisible = false;
+
+  const courseProgress = getCourseProgress(course);
 
   els.courseTitle.textContent = course.title;
   els.courseDescription.textContent = course.description || "";
   els.courseMeta.textContent = `${course.group || "Course"} · ${course.wordIds.length} cards`;
   els.courseLevel.textContent = course.level || "A1";
+  els.courseDetailProgressBar.style.width = `${courseProgress.percent}%`;
+  els.courseDetailProgressText.textContent =
+    `${courseProgress.knownCount} / ${courseProgress.total} known · ${courseProgress.reviewCount} review`;
 
-  showScreen("course");
+  if (showCourseScreen) {
+    showScreen("course");
+  }
 }
 
 function startPractice(mode) {
   state.currentMode = mode;
   state.lastMode = mode;
   state.lastCourseId = state.currentCourse?.id || null;
-  state.currentIndex = 0;
   state.answerVisible = false;
   state.sessionReviewIds = new Set();
+
+  if (state.currentCourse && !state.currentCourse.temporary) {
+    const progress = ensureCourseProgress(state.currentCourse.id);
+    progress.started = true;
+    progress.lastMode = mode;
+    progress.lastIndex = state.currentIndex || 0;
+  }
 
   saveProgress();
   showScreen("practice");
@@ -355,6 +497,7 @@ function renderCard() {
   els.cardAnswer.textContent = content.answer;
 
   updateStats();
+  saveCurrentCoursePosition();
 }
 
 function getCardContent(card, mode) {
@@ -429,23 +572,49 @@ function nextCard() {
 
   if (state.currentIndex >= state.currentCards.length - 1) {
     state.answerVisible = false;
+    saveCurrentCoursePosition();
     showScreen("complete");
     return;
   }
 
   state.currentIndex += 1;
   state.answerVisible = false;
+  saveCurrentCoursePosition();
   renderCard();
+}
+
+function markCourseCompletedIfNeeded() {
+  if (!state.currentCourse || state.currentCourse.temporary) return;
+
+  const progress = ensureCourseProgress(state.currentCourse.id);
+
+  progress.started = true;
+  progress.completed = true;
+  progress.lastMode = state.currentMode;
+  progress.lastIndex = 0;
+  progress.completedAt = new Date().toISOString();
+
+  saveProgress();
 }
 
 function renderCompleteScreen() {
   const total = state.currentCards.length;
   const reviewCount = state.sessionReviewIds.size;
+  const progress = state.currentCourse && !state.currentCourse.temporary
+    ? getCourseProgress(state.currentCourse)
+    : null;
 
-  els.completeMeta.textContent =
-    reviewCount > 0
-      ? `${total} cards finished. ${reviewCount} to review.`
-      : `${total} cards finished. Nothing to review. Suspiciously good.`;
+  if (progress) {
+    els.completeMeta.textContent =
+      reviewCount > 0
+        ? `${total} cards finished. ${reviewCount} to review. Course is ${progress.percent}% known.`
+        : `${total} cards finished. Nothing to review. Suspiciously good.`;
+  } else {
+    els.completeMeta.textContent =
+      reviewCount > 0
+        ? `${total} cards finished. ${reviewCount} to review.`
+        : `${total} cards finished. Nothing to review.`;
+  }
 
   els.reviewSessionBtn.disabled = reviewCount === 0;
 }
@@ -454,6 +623,15 @@ function repeatCurrentDeck() {
   state.currentIndex = 0;
   state.answerVisible = false;
   state.sessionReviewIds = new Set();
+
+  if (state.currentCourse && !state.currentCourse.temporary) {
+    const progress = ensureCourseProgress(state.currentCourse.id);
+    progress.started = true;
+    progress.lastMode = state.currentMode;
+    progress.lastIndex = 0;
+  }
+
+  saveProgress();
   showScreen("practice");
   renderCard();
 }
@@ -482,7 +660,8 @@ function reviewCurrentSession() {
     group: "Review",
     level: "Practice",
     description: "Words flipped during this session.",
-    wordIds: reviewCards.map((card) => card.id)
+    wordIds: reviewCards.map((card) => card.id),
+    temporary: true
   };
 
   state.currentCards = reviewCards;
@@ -511,7 +690,22 @@ function shuffleCurrentCourse() {
   state.currentCards = shuffleArray([...state.currentCards]);
   state.currentIndex = 0;
   state.answerVisible = false;
+  saveCurrentCoursePosition();
   renderCard();
+}
+
+function saveCurrentCoursePosition() {
+  if (!state.currentCourse || state.currentCourse.temporary) return;
+
+  const progress = ensureCourseProgress(state.currentCourse.id);
+  progress.started = true;
+  progress.lastMode = state.currentMode;
+  progress.lastIndex = state.currentIndex;
+
+  state.lastCourseId = state.currentCourse.id;
+  state.lastMode = state.currentMode;
+
+  saveProgress();
 }
 
 function getCurrentCard() {
@@ -539,15 +733,14 @@ function speakCurrentGerman() {
 }
 
 function resetProgress() {
-  const confirmed = confirm(
-    "Reset all GermanFlash progress on this device?"
-  );
+  const confirmed = confirm("Reset all GermanFlash progress on this device?");
 
   if (!confirmed) return;
 
   state.knownIds.clear();
   state.reviewIds.clear();
   state.sessionReviewIds.clear();
+  state.courseProgress = {};
   state.lastCourseId = null;
   state.lastMode = "de-en";
 
@@ -566,6 +759,7 @@ function saveProgress() {
     JSON.stringify({
       knownIds: [...state.knownIds],
       reviewIds: [...state.reviewIds],
+      courseProgress: state.courseProgress,
       lastCourseId: state.lastCourseId,
       lastMode: state.lastMode
     })
@@ -580,14 +774,25 @@ function loadProgress() {
     const progress = JSON.parse(raw);
     state.knownIds = new Set(progress.knownIds || []);
     state.reviewIds = new Set(progress.reviewIds || []);
+    state.courseProgress = progress.courseProgress || {};
     state.lastCourseId = progress.lastCourseId || null;
     state.lastMode = progress.lastMode || "de-en";
   } catch {
     state.knownIds = new Set();
     state.reviewIds = new Set();
+    state.courseProgress = {};
     state.lastCourseId = null;
     state.lastMode = "de-en";
   }
+}
+
+function getCourseById(courseId) {
+  return state.courses.find((course) => course.id === courseId);
+}
+
+function clampIndex(index, length) {
+  if (!length) return 0;
+  return Math.max(0, Math.min(index, length - 1));
 }
 
 function shuffleArray(array) {

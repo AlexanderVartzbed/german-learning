@@ -27,7 +27,7 @@
       <section class="launcher-grid">
         <button id="startTodayBtn" class="launcher-card primary">
           <span>Start Today</span>
-          <small>Recommended lesson</small>
+          <small id="startTodayMeta">Next unfinished lesson</small>
         </button>
 
         <button id="reviewMistakesBtn" class="launcher-card hidden">
@@ -37,7 +37,7 @@
 
         <button id="browseCoursesBtn" class="launcher-card">
           <span>Browse Courses</span>
-          <small>Choose a specific deck</small>
+          <small>See progress by category</small>
         </button>
 
         <button id="resetProgressBtn" class="launcher-card quiet">
@@ -74,6 +74,11 @@
         <h2 id="courseTitle"></h2>
         <p id="courseDescription"></p>
         <p id="courseMeta"></p>
+
+        <div class="progress-track">
+          <div id="courseDetailProgressBar" class="progress-fill"></div>
+        </div>
+        <p id="courseDetailProgressText" class="progress-text">0 / 0 known</p>
       </div>
 
       <div class="mode-grid">
