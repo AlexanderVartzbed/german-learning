@@ -8,54 +8,55 @@
 </head>
 <body>
   <main class="app">
-    <header class="header">
+    <header class="topbar">
       <div>
         <h1>GermanFlash</h1>
-        <p>Learn German one clean card at a time.</p>
+        <p id="subtitle">Pick a course and start.</p>
       </div>
-      <button id="resetProgressBtn" class="ghost-button">Reset Progress</button>
+      <button id="homeBtn" class="small-btn hidden">Home</button>
     </header>
 
-    <section class="panel">
-      <label for="courseSelect">Course</label>
-      <select id="courseSelect"></select>
-
-      <label for="modeSelect">Mode</label>
-      <select id="modeSelect">
-        <option value="de-en">German → English</option>
-        <option value="en-de">English → German</option>
-        <option value="article">Article Quiz</option>
-      </select>
+    <section id="homeScreen" class="screen active">
+      <h2>Choose a course</h2>
+      <div id="courseList" class="course-list"></div>
     </section>
 
-    <section class="stats">
-      <span id="cardCounter">Card 0 / 0</span>
-      <span id="scoreCounter">Known: 0 | Review: 0</span>
+    <section id="courseScreen" class="screen">
+      <button id="backToCoursesBtn" class="text-btn">← Courses</button>
+      <h2 id="courseTitle"></h2>
+      <p id="courseDescription"></p>
+
+      <div class="mode-grid">
+        <button data-mode="de-en">German → English</button>
+        <button data-mode="en-de">English → German</button>
+        <button data-mode="article">Article Quiz</button>
+      </div>
     </section>
 
-    <section class="card-area">
-      <button id="prevBtn" class="nav-button">←</button>
+    <section id="practiceScreen" class="screen">
+      <div class="progress-row">
+        <span id="cardCounter">1 / 1</span>
+        <span id="scoreCounter">Known 0 · Review 0</span>
+      </div>
 
       <article id="flashcard" class="flashcard">
+        <p id="modeLabel" class="mode-label"></p>
         <div id="cardQuestion" class="card-question">Loading...</div>
         <div id="cardAnswer" class="card-answer hidden"></div>
+        <p class="tap-hint">Tap to flip</p>
       </article>
 
-      <button id="nextBtn" class="nav-button">→</button>
+      <div class="secondary-actions">
+        <button id="speakBtn">Speak</button>
+        <button id="shuffleBtn">Shuffle</button>
+      </div>
     </section>
 
-    <section class="actions">
+    <nav id="bottomBar" class="bottom-bar hidden">
+      <button id="reviewBtn" class="danger">Review</button>
       <button id="flipBtn">Flip</button>
-      <button id="speakBtn">Speak</button>
       <button id="knowBtn" class="success">Know</button>
-      <button id="dontKnowBtn" class="danger">Review</button>
-      <button id="shuffleBtn">Shuffle</button>
-    </section>
-
-    <section class="review-panel">
-      <h2>Review pile</h2>
-      <ul id="reviewList"></ul>
-    </section>
+    </nav>
   </main>
 
   <script type="module" src="app.js"></script>
