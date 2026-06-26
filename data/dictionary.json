@@ -32,6 +32,66 @@
   {
     "id": 1004,
     "type": "noun",
+    "word": "Pferd",
+    "article": "das",
+    "plural": "Pferde",
+    "english": "horse",
+    "level": "A1",
+    "tags": ["animals"]
+  },
+  {
+    "id": 1005,
+    "type": "noun",
+    "word": "Maus",
+    "article": "die",
+    "plural": "Mäuse",
+    "english": "mouse",
+    "level": "A1",
+    "tags": ["animals"]
+  },
+  {
+    "id": 1101,
+    "type": "noun",
+    "word": "Haus",
+    "article": "das",
+    "plural": "Häuser",
+    "english": "house",
+    "level": "A1",
+    "tags": ["home"]
+  },
+  {
+    "id": 1102,
+    "type": "noun",
+    "word": "Tür",
+    "article": "die",
+    "plural": "Türen",
+    "english": "door",
+    "level": "A1",
+    "tags": ["home"]
+  },
+  {
+    "id": 1103,
+    "type": "noun",
+    "word": "Fenster",
+    "article": "das",
+    "plural": "Fenster",
+    "english": "window",
+    "level": "A1",
+    "tags": ["home"]
+  },
+  {
+    "id": 1104,
+    "type": "noun",
+    "word": "Zimmer",
+    "article": "das",
+    "plural": "Zimmer",
+    "english": "room",
+    "level": "A1",
+    "tags": ["home"]
+  },
+  {
+    "id": 1201,
+    "type": "noun",
     "word": "Brot",
     "article": "das",
     "plural": "Brote",
@@ -40,7 +100,7 @@
     "tags": ["food"]
   },
   {
-    "id": 1005,
+    "id": 1202,
     "type": "noun",
     "word": "Wasser",
     "article": "das",
@@ -50,7 +110,35 @@
     "tags": ["food", "drink"]
   },
   {
-    "id": 1006,
+    "id": 1203,
+    "type": "noun",
+    "word": "Apfel",
+    "article": "der",
+    "plural": "Äpfel",
+    "english": "apple",
+    "level": "A1",
+    "tags": ["food", "fruit"]
+  },
+  {
+    "id": 1204,
+    "type": "noun",
+    "word": "Milch",
+    "article": "die",
+    "plural": null,
+    "english": "milk",
+    "level": "A1",
+    "tags": ["food", "drink"]
+  },
+  {
+    "id": 1301,
+    "type": "verb",
+    "word": "gehen",
+    "english": "to go",
+    "level": "A1",
+    "tags": ["verbs", "movement"]
+  },
+  {
+    "id": 1302,
     "type": "verb",
     "word": "essen",
     "english": "to eat",
@@ -58,19 +146,51 @@
     "tags": ["verbs", "food"]
   },
   {
-    "id": 1007,
+    "id": 1303,
     "type": "verb",
     "word": "trinken",
     "english": "to drink",
     "level": "A1",
-    "tags": ["verbs", "drink"]
+    "tags": ["verbs", "food"]
   },
   {
-    "id": 1008,
-    "type": "phrase",
-    "word": "Guten Morgen",
-    "english": "Good morning",
+    "id": 1304,
+    "type": "verb",
+    "word": "spielen",
+    "english": "to play",
     "level": "A1",
-    "tags": ["greetings"]
+    "tags": ["verbs", "kids"]
+  },
+  {
+    "id": 1401,
+    "type": "adjective",
+    "word": "groß",
+    "english": "big",
+    "level": "A1",
+    "tags": ["adjectives"]
+  },
+  {
+    "id": 1402,
+    "type": "adjective",
+    "word": "klein",
+    "english": "small",
+    "level": "A1",
+    "tags": ["adjectives"]
+  },
+  {
+    "id": 1403,
+    "type": "adjective",
+    "word": "gut",
+    "english": "good",
+    "level": "A1",
+    "tags": ["adjectives"]
+  },
+  {
+    "id": 1404,
+    "type": "adjective",
+    "word": "schlecht",
+    "english": "bad",
+    "level": "A1",
+    "tags": ["adjectives"]
   }
 ]

@@ -1,57 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>German Learning</title>
+  <title>GermanFlash</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="app-header">
-    <h1>German Learning</h1>
-    <p>Flashcards, courses, and practice for learning German.</p>
-  </header>
+  <main class="app">
+    <header class="header">
+      <div>
+        <h1>GermanFlash</h1>
+        <p>Learn German one clean card at a time.</p>
+      </div>
+      <button id="resetProgressBtn" class="ghost-button">Reset Progress</button>
+    </header>
 
-  <main class="app-shell">
     <section class="panel">
-      <h2>Courses</h2>
-      <div id="courseList" class="course-list"></div>
+      <label for="courseSelect">Course</label>
+      <select id="courseSelect"></select>
+
+      <label for="modeSelect">Mode</label>
+      <select id="modeSelect">
+        <option value="de-en">German → English</option>
+        <option value="en-de">English → German</option>
+        <option value="article">Article Quiz</option>
+      </select>
     </section>
 
-    <section class="panel learning-panel">
-      <div id="courseMeta" class="course-meta">
-        <h2>Select a course</h2>
-        <p>Choose a course to begin.</p>
-      </div>
+    <section class="stats">
+      <span id="cardCounter">Card 0 / 0</span>
+      <span id="scoreCounter">Known: 0 | Review: 0</span>
+    </section>
 
-      <div class="controls">
-        <label for="modeSelect">Mode</label>
-        <select id="modeSelect">
-          <option value="de-en">German → English</option>
-          <option value="en-de">English → German</option>
-          <option value="article">Article Quiz</option>
-        </select>
-        <button id="shuffleBtn">Shuffle</button>
-      </div>
+    <section class="card-area">
+      <button id="prevBtn" class="nav-button">←</button>
 
-      <article id="flashcard" class="flashcard" tabindex="0">
-        <div id="cardFront" class="card-face">Select a course</div>
-        <div id="cardBack" class="card-face muted">Then click a card to flip it.</div>
+      <article id="flashcard" class="flashcard">
+        <div id="cardQuestion" class="card-question">Loading...</div>
+        <div id="cardAnswer" class="card-answer hidden"></div>
       </article>
 
-      <div class="card-actions">
-        <button id="prevBtn">Previous</button>
-        <button id="flipBtn">Flip</button>
-        <button id="speakBtn">Speak</button>
-        <button id="nextBtn">Next</button>
-      </div>
+      <button id="nextBtn" class="nav-button">→</button>
+    </section>
 
-      <div class="answer-actions">
-        <button id="wrongBtn" class="danger">Don’t Know</button>
-        <button id="knownBtn" class="success">Know</button>
-      </div>
+    <section class="actions">
+      <button id="flipBtn">Flip</button>
+      <button id="speakBtn">Speak</button>
+      <button id="knowBtn" class="success">Know</button>
+      <button id="dontKnowBtn" class="danger">Review</button>
+      <button id="shuffleBtn">Shuffle</button>
+    </section>
 
-      <p id="statusText" class="status">No course loaded.</p>
+    <section class="review-panel">
+      <h2>Review pile</h2>
+      <ul id="reviewList"></ul>
     </section>
   </main>
 

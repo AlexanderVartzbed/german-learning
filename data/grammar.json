@@ -1,10 +1,23 @@
 {
-  "articles": ["der", "die", "das"],
+  "articles": {
+    "der": {
+      "gender": "masculine",
+      "example": "der Hund"
+    },
+    "die": {
+      "gender": "feminine",
+      "example": "die Katze"
+    },
+    "das": {
+      "gender": "neuter",
+      "example": "das Haus"
+    }
+  },
   "notes": [
     {
       "id": "noun-articles",
-      "title": "German noun articles",
-      "body": "German nouns have grammatical gender: der, die, or das. Learn the article with the noun from the beginning."
+      "title": "German nouns have articles",
+      "body": "Most German nouns should be learned together with their article: der, die, or das."
     }
   ]
 }
