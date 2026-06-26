@@ -302,13 +302,13 @@ p {
 }
 
 .flashcard {
-  min-height: 55dvh;
+  min-height: 40dvh;
   perspective: 1200px;
 }
 
 .card-inner {
   position: relative;
-  min-height: 55dvh;
+  min-height: 40dvh;
   transform-style: preserve-3d;
   transition: transform 420ms cubic-bezier(.2,.8,.2,1);
 }
