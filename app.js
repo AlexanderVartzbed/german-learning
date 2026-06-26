@@ -1,13 +1,16 @@
 const state = {
   dictionary: [],
   courses: [],
+  activeGroup: "All",
   currentCourse: null,
   currentCards: [],
   currentIndex: 0,
   currentMode: "de-en",
   answerVisible: false,
   knownIds: new Set(),
-  reviewIds: new Set()
+  reviewIds: new Set(),
+  lastCourseId: null,
+  lastMode: "de-en"
 };
 
 const els = {
@@ -17,10 +20,25 @@ const els = {
   courseScreen: document.getElementById("courseScreen"),
   practiceScreen: document.getElementById("practiceScreen"),
   bottomBar: document.getElementById("bottomBar"),
+
+  continuePanel: document.getElementById("continuePanel"),
+  continueTitle: document.getElementById("continueTitle"),
+  continueMeta: document.getElementById("continueMeta"),
+  continueBtn: document.getElementById("continueBtn"),
+
+  recommendedList: document.getElementById("recommendedList"),
+  recommendedCount: document.getElementById("recommendedCount"),
+  groupChips: document.getElementById("groupChips"),
+  courseGroupTitle: document.getElementById("courseGroupTitle"),
+  courseCount: document.getElementById("courseCount"),
   courseList: document.getElementById("courseList"),
+
   courseTitle: document.getElementById("courseTitle"),
   courseDescription: document.getElementById("courseDescription"),
+  courseMeta: document.getElementById("courseMeta"),
+  courseLevel: document.getElementById("courseLevel"),
   backToCoursesBtn: document.getElementById("backToCoursesBtn"),
+
   cardCounter: document.getElementById("cardCounter"),
   scoreCounter: document.getElementById("scoreCounter"),
   flashcard: document.getElementById("flashcard"),
@@ -44,18 +62,24 @@ async function init() {
     ]);
 
     state.dictionary = dictionary;
-    state.courses = courses;
+    state.courses = [...courses].sort((a, b) => {
+      const groupSort = (a.group || "").localeCompare(b.group || "");
+      if (groupSort !== 0) return groupSort;
+      return (a.order || 999) - (b.order || 999);
+    });
 
     loadProgress();
     bindEvents();
-    renderCourseList();
+    renderHome();
     showScreen("home");
   } catch (error) {
     console.error(error);
     els.courseList.innerHTML = `
-      <div class="course-card">
-        <strong>Could not load GermanFlash.</strong>
-        <span>Check data/dictionary.json and data/courses.json.</span>
+      <div class="course-row">
+        <div>
+          <strong>Could not load GermanFlash.</strong>
+          <span>Check data/dictionary.json and data/courses.json.</span>
+        </div>
       </div>
     `;
   }
@@ -70,6 +94,12 @@ async function fetchJson(path) {
 function bindEvents() {
   els.homeBtn.addEventListener("click", () => showScreen("home"));
   els.backToCoursesBtn.addEventListener("click", () => showScreen("home"));
+
+  els.continueBtn.addEventListener("click", () => {
+    if (!state.lastCourseId) return;
+    openCourse(state.lastCourseId);
+    startPractice(state.lastMode || "de-en");
+  });
 
   document.querySelectorAll("[data-mode]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -92,15 +122,16 @@ function showScreen(screen) {
   els.bottomBar.classList.add("hidden");
 
   if (screen === "home") {
+    renderHome();
     els.homeScreen.classList.add("active");
     els.homeBtn.classList.add("hidden");
-    els.subtitle.textContent = "Pick a course and start.";
+    els.subtitle.textContent = "Small lessons. No chaos.";
   }
 
   if (screen === "course") {
     els.courseScreen.classList.add("active");
     els.homeBtn.classList.remove("hidden");
-    els.subtitle.textContent = "Choose how to practise.";
+    els.subtitle.textContent = "Choose practice mode.";
   }
 
   if (screen === "practice") {
@@ -111,23 +142,95 @@ function showScreen(screen) {
   }
 }
 
+function renderHome() {
+  renderContinuePanel();
+  renderRecommended();
+  renderGroupChips();
+  renderCourseList();
+}
+
+function renderContinuePanel() {
+  if (!state.lastCourseId) {
+    els.continuePanel.classList.add("hidden");
+    return;
+  }
+
+  const course = state.courses.find((item) => item.id === state.lastCourseId);
+  if (!course) {
+    els.continuePanel.classList.add("hidden");
+    return;
+  }
+
+  els.continueTitle.textContent = course.title;
+  els.continueMeta.textContent = `${course.level || "A1"} · ${course.wordIds.length} cards · ${getModeLabel(state.lastMode)}`;
+  els.continuePanel.classList.remove("hidden");
+}
+
+function renderRecommended() {
+  const recommended = state.courses
+    .filter((course) => course.recommended)
+    .slice(0, 3);
+
+  els.recommendedCount.textContent = `${recommended.length}`;
+  els.recommendedList.innerHTML = "";
+
+  recommended.forEach((course) => {
+    els.recommendedList.appendChild(createCourseRow(course));
+  });
+}
+
+function renderGroupChips() {
+  const groups = ["All", ...new Set(state.courses.map((course) => course.group || "Other"))];
+
+  els.groupChips.innerHTML = "";
+
+  groups.forEach((group) => {
+    const button = document.createElement("button");
+    button.className = group === state.activeGroup ? "chip active" : "chip";
+    button.textContent = group;
+
+    button.addEventListener("click", () => {
+      state.activeGroup = group;
+      renderHome();
+    });
+
+    els.groupChips.appendChild(button);
+  });
+}
+
 function renderCourseList() {
+  const courses =
+    state.activeGroup === "All"
+      ? state.courses
+      : state.courses.filter((course) => course.group === state.activeGroup);
+
+  els.courseGroupTitle.textContent =
+    state.activeGroup === "All" ? "All Courses" : state.activeGroup;
+
+  els.courseCount.textContent = `${courses.length}`;
   els.courseList.innerHTML = "";
 
-  state.courses.forEach((course) => {
-    const count = course.wordIds.length;
-    const button = document.createElement("button");
-
-    button.className = "course-card";
-    button.innerHTML = `
-      <strong>${course.title}</strong>
-      <span>${course.description || ""}</span>
-      <span>${count} cards</span>
-    `;
-
-    button.addEventListener("click", () => openCourse(course.id));
-    els.courseList.appendChild(button);
+  courses.forEach((course) => {
+    els.courseList.appendChild(createCourseRow(course));
   });
+}
+
+function createCourseRow(course) {
+  const button = document.createElement("button");
+  const count = course.wordIds.length;
+
+  button.className = "course-row";
+  button.innerHTML = `
+    <div>
+      <strong>${course.title}</strong>
+      <span>${course.group || "Course"} · ${count} cards</span>
+    </div>
+    <span class="mini-pill">${course.level || "A1"}</span>
+  `;
+
+  button.addEventListener("click", () => openCourse(course.id));
+
+  return button;
 }
 
 function openCourse(courseId) {
@@ -144,20 +247,28 @@ function openCourse(courseId) {
 
   els.courseTitle.textContent = course.title;
   els.courseDescription.textContent = course.description || "";
+  els.courseMeta.textContent = `${course.group || "Course"} · ${course.wordIds.length} cards`;
+  els.courseLevel.textContent = course.level || "A1";
 
   showScreen("course");
 }
 
 function startPractice(mode) {
   state.currentMode = mode;
+  state.lastMode = mode;
+  state.lastCourseId = state.currentCourse?.id || null;
   state.currentIndex = 0;
   state.answerVisible = false;
+
+  saveProgress();
   showScreen("practice");
   renderCard();
 }
 
 function renderCard() {
   const card = getCurrentCard();
+
+  els.flashcard.classList.toggle("flipped", state.answerVisible);
 
   if (!card) {
     els.cardQuestion.textContent = "No cards";
@@ -170,7 +281,6 @@ function renderCard() {
   els.modeLabel.textContent = getModeLabel(state.currentMode);
   els.cardQuestion.textContent = content.question;
   els.cardAnswer.textContent = content.answer;
-  els.cardAnswer.classList.toggle("hidden", !state.answerVisible);
 
   updateStats();
 }
@@ -221,6 +331,7 @@ function markKnown() {
 
   state.knownIds.add(card.id);
   state.reviewIds.delete(card.id);
+
   saveProgress();
   nextCard();
 }
@@ -231,6 +342,7 @@ function markReview() {
 
   state.reviewIds.add(card.id);
   state.knownIds.delete(card.id);
+
   saveProgress();
   nextCard();
 }
@@ -279,7 +391,9 @@ function saveProgress() {
     "germanflash-progress",
     JSON.stringify({
       knownIds: [...state.knownIds],
-      reviewIds: [...state.reviewIds]
+      reviewIds: [...state.reviewIds],
+      lastCourseId: state.lastCourseId,
+      lastMode: state.lastMode
     })
   );
 }
@@ -292,9 +406,13 @@ function loadProgress() {
     const progress = JSON.parse(raw);
     state.knownIds = new Set(progress.knownIds || []);
     state.reviewIds = new Set(progress.reviewIds || []);
+    state.lastCourseId = progress.lastCourseId || null;
+    state.lastMode = progress.lastMode || "de-en";
   } catch {
     state.knownIds = new Set();
     state.reviewIds = new Set();
+    state.lastCourseId = null;
+    state.lastMode = "de-en";
   }
 }
 

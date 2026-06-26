@@ -8,6 +8,7 @@
   --accent-dark: #c2410c;
   --success: #15803d;
   --danger: #b91c1c;
+  --soft: #ffedd5;
   --shadow: 0 18px 45px rgba(124, 45, 18, 0.12);
 }
 
@@ -61,8 +62,8 @@ h1 {
 }
 
 h2 {
-  margin: 0 0 14px;
-  font-size: 1.5rem;
+  margin: 0;
+  font-size: 1.35rem;
   letter-spacing: -0.03em;
 }
 
@@ -87,33 +88,6 @@ p {
   display: none !important;
 }
 
-.course-list {
-  display: grid;
-  gap: 12px;
-}
-
-.course-card {
-  width: 100%;
-  text-align: left;
-  background: var(--card);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 18px;
-  box-shadow: var(--shadow);
-}
-
-.course-card strong {
-  display: block;
-  font-size: 1.2rem;
-  margin-bottom: 6px;
-}
-
-.course-card span {
-  color: var(--muted);
-  font-weight: 650;
-}
-
 .small-btn,
 .text-btn {
   background: rgba(255,255,255,0.8);
@@ -130,10 +104,129 @@ p {
   margin-bottom: 16px;
 }
 
+.hero-card,
+.course-detail-card,
+.course-row {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.hero-card,
+.course-detail-card {
+  border-radius: 28px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-card h2,
+.course-detail-card h2 {
+  margin: 6px 0 8px;
+  font-size: 1.7rem;
+}
+
+.eyebrow,
+.pill {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--accent-dark);
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.section-block {
+  margin-bottom: 24px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.section-heading span {
+  color: var(--muted);
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.chip-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+
+.chip-row::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  white-space: nowrap;
+  background: rgba(255,255,255,0.8);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+
+.chip.active {
+  background: var(--accent);
+  color: white;
+}
+
+.compact-list {
+  display: grid;
+  gap: 10px;
+}
+
+.course-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  text-align: left;
+  color: var(--text);
+  border-radius: 22px;
+  padding: 14px 16px;
+}
+
+.course-row strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.course-row span {
+  display: block;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.course-row .mini-pill {
+  background: var(--soft);
+  color: var(--accent-dark);
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-weight: 950;
+  font-size: 0.75rem;
+}
+
 .mode-grid {
   display: grid;
   gap: 12px;
-  margin-top: 22px;
+  margin-top: 18px;
 }
 
 .mode-grid button {
@@ -153,6 +246,23 @@ p {
 
 .flashcard {
   min-height: 55dvh;
+  perspective: 1200px;
+}
+
+.card-inner {
+  position: relative;
+  min-height: 55dvh;
+  transform-style: preserve-3d;
+  transition: transform 420ms cubic-bezier(.2,.8,.2,1);
+}
+
+.flashcard.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 34px;
@@ -162,12 +272,19 @@ p {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: #fffaf3;
 }
 
 .mode-label {
   margin: 0 0 20px;
   font-size: 0.85rem;
-  font-weight: 900;
+  font-weight: 950;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--accent);
@@ -181,9 +298,10 @@ p {
 }
 
 .card-answer {
-  margin-top: 24px;
-  font-size: clamp(1.8rem, 8vw, 3rem);
-  font-weight: 900;
+  font-size: clamp(2.2rem, 10vw, 4rem);
+  line-height: 1;
+  font-weight: 950;
+  letter-spacing: -0.06em;
   color: var(--accent-dark);
 }
 
@@ -244,7 +362,8 @@ p {
     font-size: 2.6rem;
   }
 
-  .flashcard {
+  .flashcard,
+  .card-inner {
     min-height: 480px;
   }
 }

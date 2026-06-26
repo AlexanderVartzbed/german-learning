@@ -1,38 +1,62 @@
 [
   {
+    "id": "starter-mix-01",
+    "title": "Starter Mix 1",
+    "group": "Start Here",
+    "level": "A1",
+    "order": 1,
+    "recommended": true,
+    "description": "A small mixed beginner deck.",
+    "wordIds": [1001, 1002, 1101, 1201, 1202, 1301, 1302, 1401, 1402]
+  },
+  {
     "id": "animals-01",
     "title": "Animals 1",
+    "group": "Animals",
+    "level": "A1",
+    "order": 1,
+    "recommended": true,
     "description": "Basic animal vocabulary.",
     "wordIds": [1001, 1002, 1003, 1004, 1005]
   },
   {
     "id": "home-01",
     "title": "Home 1",
+    "group": "Home",
+    "level": "A1",
+    "order": 1,
+    "recommended": false,
     "description": "Simple words around the house.",
     "wordIds": [1101, 1102, 1103, 1104]
   },
   {
     "id": "food-01",
     "title": "Food 1",
+    "group": "Food & Drink",
+    "level": "A1",
+    "order": 1,
+    "recommended": true,
     "description": "Basic food and drink vocabulary.",
     "wordIds": [1201, 1202, 1203, 1204]
   },
   {
     "id": "verbs-01",
     "title": "Verbs 1",
+    "group": "Verbs",
+    "level": "A1",
+    "order": 1,
+    "recommended": false,
     "description": "Starter verbs.",
     "wordIds": [1301, 1302, 1303, 1304]
   },
   {
     "id": "adjectives-01",
     "title": "Adjectives 1",
+    "group": "Adjectives",
+    "level": "A1",
+    "order": 1,
+    "recommended": false,
     "description": "Simple describing words.",
     "wordIds": [1401, 1402, 1403, 1404]
-  },
-  {
-    "id": "starter-mix-01",
-    "title": "Starter Mix 1",
-    "description": "A small mixed beginner deck.",
-    "wordIds": [1001, 1002, 1101, 1201, 1202, 1301, 1302, 1401, 1402]
   }
 ]

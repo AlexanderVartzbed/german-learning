@@ -11,20 +11,52 @@
     <header class="topbar">
       <div>
         <h1>GermanFlash</h1>
-        <p id="subtitle">Pick a course and start.</p>
+        <p id="subtitle">Small lessons. No chaos.</p>
       </div>
       <button id="homeBtn" class="small-btn hidden">Home</button>
     </header>
 
     <section id="homeScreen" class="screen active">
-      <h2>Choose a course</h2>
-      <div id="courseList" class="course-list"></div>
+      <section id="continuePanel" class="hero-card hidden">
+        <span class="eyebrow">Continue</span>
+        <h2 id="continueTitle">Course</h2>
+        <p id="continueMeta">Pick up where you left off.</p>
+        <button id="continueBtn">Continue</button>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading">
+          <h2>Recommended</h2>
+          <span id="recommendedCount"></span>
+        </div>
+        <div id="recommendedList" class="compact-list"></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading">
+          <h2>Categories</h2>
+        </div>
+        <div id="groupChips" class="chip-row"></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading">
+          <h2 id="courseGroupTitle">All Courses</h2>
+          <span id="courseCount"></span>
+        </div>
+        <div id="courseList" class="compact-list"></div>
+      </section>
     </section>
 
     <section id="courseScreen" class="screen">
       <button id="backToCoursesBtn" class="text-btn">← Courses</button>
-      <h2 id="courseTitle"></h2>
-      <p id="courseDescription"></p>
+
+      <div class="course-detail-card">
+        <span id="courseLevel" class="pill">A1</span>
+        <h2 id="courseTitle"></h2>
+        <p id="courseDescription"></p>
+        <p id="courseMeta"></p>
+      </div>
 
       <div class="mode-grid">
         <button data-mode="de-en">German → English</button>
@@ -40,10 +72,19 @@
       </div>
 
       <article id="flashcard" class="flashcard">
-        <p id="modeLabel" class="mode-label"></p>
-        <div id="cardQuestion" class="card-question">Loading...</div>
-        <div id="cardAnswer" class="card-answer hidden"></div>
-        <p class="tap-hint">Tap to flip</p>
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <p id="modeLabel" class="mode-label"></p>
+            <div id="cardQuestion" class="card-question">Loading...</div>
+            <p class="tap-hint">Tap to flip</p>
+          </div>
+
+          <div class="card-face card-back">
+            <p class="mode-label">Answer</p>
+            <div id="cardAnswer" class="card-answer"></div>
+            <p class="tap-hint">Tap to flip back</p>
+          </div>
+        </div>
       </article>
 
       <div class="secondary-actions">
