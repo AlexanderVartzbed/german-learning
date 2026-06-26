@@ -40,6 +40,11 @@ button:active {
   transform: scale(0.98);
 }
 
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
 .app {
   min-height: 100dvh;
   max-width: 540px;
@@ -107,17 +112,29 @@ p {
 .hero-card,
 .course-detail-card,
 .course-row,
-.launcher-card {
+.launcher-card,
+.complete-card {
   background: var(--card);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
 
 .hero-card,
-.course-detail-card {
+.course-detail-card,
+.complete-card {
   border-radius: 28px;
   padding: 20px;
   margin-bottom: 20px;
+}
+
+.complete-card {
+  text-align: center;
+  padding: 28px 20px;
+}
+
+.complete-card h2 {
+  margin-top: 10px;
+  font-size: 2.4rem;
 }
 
 .hero-card h2,
@@ -363,6 +380,16 @@ p {
   border: 1px solid var(--border);
 }
 
+.complete-actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.complete-actions button {
+  min-height: 58px;
+}
+
 .bottom-bar {
   position: fixed;
   left: 50%;
@@ -370,7 +397,7 @@ p {
   transform: translateX(-50%);
   width: min(540px, calc(100vw - 24px));
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
   padding: 10px;
   background: rgba(255, 247, 237, 0.86);

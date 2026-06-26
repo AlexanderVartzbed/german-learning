@@ -9,6 +9,7 @@ const state = {
   answerVisible: false,
   knownIds: new Set(),
   reviewIds: new Set(),
+  sessionReviewIds: new Set(),
   lastCourseId: null,
   lastMode: "de-en"
 };
@@ -21,6 +22,7 @@ const els = {
   browseScreen: document.getElementById("browseScreen"),
   courseScreen: document.getElementById("courseScreen"),
   practiceScreen: document.getElementById("practiceScreen"),
+  completeScreen: document.getElementById("completeScreen"),
   bottomBar: document.getElementById("bottomBar"),
 
   continuePanel: document.getElementById("continuePanel"),
@@ -56,7 +58,11 @@ const els = {
   speakBtn: document.getElementById("speakBtn"),
   shuffleBtn: document.getElementById("shuffleBtn"),
   knowBtn: document.getElementById("knowBtn"),
-  reviewBtn: document.getElementById("reviewBtn")
+
+  completeMeta: document.getElementById("completeMeta"),
+  repeatBtn: document.getElementById("repeatBtn"),
+  continueNextBtn: document.getElementById("continueNextBtn"),
+  reviewSessionBtn: document.getElementById("reviewSessionBtn")
 };
 
 init();
@@ -111,7 +117,10 @@ function bindEvents() {
   els.speakBtn.addEventListener("click", speakCurrentGerman);
   els.shuffleBtn.addEventListener("click", shuffleCurrentCourse);
   els.knowBtn.addEventListener("click", markKnown);
-  els.reviewBtn.addEventListener("click", markReview);
+
+  els.repeatBtn.addEventListener("click", repeatCurrentDeck);
+  els.continueNextBtn.addEventListener("click", continueToNextCourse);
+  els.reviewSessionBtn.addEventListener("click", reviewCurrentSession);
 }
 
 function showScreen(screen) {
@@ -119,6 +128,7 @@ function showScreen(screen) {
   els.browseScreen.classList.remove("active");
   els.courseScreen.classList.remove("active");
   els.practiceScreen.classList.remove("active");
+  els.completeScreen.classList.remove("active");
   els.bottomBar.classList.add("hidden");
 
   if (screen === "home") {
@@ -146,6 +156,13 @@ function showScreen(screen) {
     els.homeBtn.classList.remove("hidden");
     els.bottomBar.classList.remove("hidden");
     els.subtitle.textContent = state.currentCourse?.title || "Practice";
+  }
+
+  if (screen === "complete") {
+    renderCompleteScreen();
+    els.completeScreen.classList.add("active");
+    els.homeBtn.classList.remove("hidden");
+    els.subtitle.textContent = "Deck finished.";
   }
 }
 
@@ -281,6 +298,7 @@ function startMistakeReview() {
   state.currentIndex = 0;
   state.answerVisible = false;
   state.currentMode = "de-en";
+  state.sessionReviewIds = new Set();
 
   showScreen("practice");
   renderCard();
@@ -312,6 +330,7 @@ function startPractice(mode) {
   state.lastCourseId = state.currentCourse?.id || null;
   state.currentIndex = 0;
   state.answerVisible = false;
+  state.sessionReviewIds = new Set();
 
   saveProgress();
   showScreen("practice");
@@ -374,8 +393,21 @@ function formatGerman(card) {
 }
 
 function flipCard() {
+  const card = getCurrentCard();
+
+  if (card && !state.answerVisible) {
+    addCardToReview(card);
+  }
+
   state.answerVisible = !state.answerVisible;
   renderCard();
+}
+
+function addCardToReview(card) {
+  state.reviewIds.add(card.id);
+  state.sessionReviewIds.add(card.id);
+  state.knownIds.delete(card.id);
+  saveProgress();
 }
 
 function markKnown() {
@@ -383,18 +415,10 @@ function markKnown() {
   if (!card) return;
 
   state.knownIds.add(card.id);
-  state.reviewIds.delete(card.id);
 
-  saveProgress();
-  nextCard();
-}
-
-function markReview() {
-  const card = getCurrentCard();
-  if (!card) return;
-
-  state.reviewIds.add(card.id);
-  state.knownIds.delete(card.id);
+  if (!state.sessionReviewIds.has(card.id)) {
+    state.reviewIds.delete(card.id);
+  }
 
   saveProgress();
   nextCard();
@@ -403,9 +427,84 @@ function markReview() {
 function nextCard() {
   if (!state.currentCards.length) return;
 
-  state.currentIndex = (state.currentIndex + 1) % state.currentCards.length;
+  if (state.currentIndex >= state.currentCards.length - 1) {
+    state.answerVisible = false;
+    showScreen("complete");
+    return;
+  }
+
+  state.currentIndex += 1;
   state.answerVisible = false;
   renderCard();
+}
+
+function renderCompleteScreen() {
+  const total = state.currentCards.length;
+  const reviewCount = state.sessionReviewIds.size;
+
+  els.completeMeta.textContent =
+    reviewCount > 0
+      ? `${total} cards finished. ${reviewCount} to review.`
+      : `${total} cards finished. Nothing to review. Suspiciously good.`;
+
+  els.reviewSessionBtn.disabled = reviewCount === 0;
+}
+
+function repeatCurrentDeck() {
+  state.currentIndex = 0;
+  state.answerVisible = false;
+  state.sessionReviewIds = new Set();
+  showScreen("practice");
+  renderCard();
+}
+
+function continueToNextCourse() {
+  const nextCourse = getNextCourse();
+
+  if (!nextCourse) {
+    showScreen("home");
+    return;
+  }
+
+  openCourse(nextCourse.id);
+}
+
+function reviewCurrentSession() {
+  const reviewCards = [...state.sessionReviewIds]
+    .map((id) => state.dictionary.find((entry) => entry.id === id))
+    .filter(Boolean);
+
+  if (!reviewCards.length) return;
+
+  state.currentCourse = {
+    id: "session-review",
+    title: "Session Review",
+    group: "Review",
+    level: "Practice",
+    description: "Words flipped during this session.",
+    wordIds: reviewCards.map((card) => card.id)
+  };
+
+  state.currentCards = reviewCards;
+  state.currentIndex = 0;
+  state.answerVisible = false;
+  state.currentMode = state.lastMode || "de-en";
+  state.sessionReviewIds = new Set();
+
+  showScreen("practice");
+  renderCard();
+}
+
+function getNextCourse() {
+  if (!state.currentCourse) return null;
+
+  const currentIndex = state.courses.findIndex(
+    (course) => course.id === state.currentCourse.id
+  );
+
+  if (currentIndex === -1) return null;
+
+  return state.courses[currentIndex + 1] || null;
 }
 
 function shuffleCurrentCourse() {
@@ -448,6 +547,7 @@ function resetProgress() {
 
   state.knownIds.clear();
   state.reviewIds.clear();
+  state.sessionReviewIds.clear();
   state.lastCourseId = null;
   state.lastMode = "de-en";
 
