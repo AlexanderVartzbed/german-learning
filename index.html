@@ -100,7 +100,7 @@
           <div class="card-face card-back">
             <p class="mode-label">Answer</p>
             <div id="cardAnswer" class="card-answer"></div>
-            <p class="tap-hint">Tap to flip back</p>
+            <p class="tap-hint">Added to review</p>
           </div>
         </div>
       </article>
@@ -111,8 +111,21 @@
       </div>
     </section>
 
+    <section id="completeScreen" class="screen">
+      <div class="complete-card">
+        <span class="eyebrow">Finished</span>
+        <h2>Well done.</h2>
+        <p id="completeMeta">You finished the deck.</p>
+
+        <div class="complete-actions">
+          <button id="repeatBtn">Repeat</button>
+          <button id="continueNextBtn">Continue</button>
+          <button id="reviewSessionBtn" class="danger">Review</button>
+        </div>
+      </div>
+    </section>
+
     <nav id="bottomBar" class="bottom-bar hidden">
-      <button id="reviewBtn" class="danger">Review</button>
       <button id="flipBtn">Flip</button>
       <button id="knowBtn" class="success">Know</button>
     </nav>
