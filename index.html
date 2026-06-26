@@ -24,13 +24,31 @@
         <button id="continueBtn">Continue</button>
       </section>
 
-      <section class="section-block">
-        <div class="section-heading">
-          <h2>Recommended</h2>
-          <span id="recommendedCount"></span>
-        </div>
-        <div id="recommendedList" class="compact-list"></div>
+      <section class="launcher-grid">
+        <button id="startTodayBtn" class="launcher-card primary">
+          <span>Start Today</span>
+          <small>Recommended lesson</small>
+        </button>
+
+        <button id="reviewMistakesBtn" class="launcher-card hidden">
+          <span>Review Mistakes</span>
+          <small id="reviewMistakesMeta">0 cards</small>
+        </button>
+
+        <button id="browseCoursesBtn" class="launcher-card">
+          <span>Browse Courses</span>
+          <small>Choose a specific deck</small>
+        </button>
+
+        <button id="resetProgressBtn" class="launcher-card quiet">
+          <span>Reset Progress</span>
+          <small>Clear this device</small>
+        </button>
       </section>
+    </section>
+
+    <section id="browseScreen" class="screen">
+      <button id="backFromBrowseBtn" class="text-btn">← Home</button>
 
       <section class="section-block">
         <div class="section-heading">

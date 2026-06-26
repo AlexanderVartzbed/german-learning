@@ -16,7 +16,9 @@ const state = {
 const els = {
   subtitle: document.getElementById("subtitle"),
   homeBtn: document.getElementById("homeBtn"),
+
   homeScreen: document.getElementById("homeScreen"),
+  browseScreen: document.getElementById("browseScreen"),
   courseScreen: document.getElementById("courseScreen"),
   practiceScreen: document.getElementById("practiceScreen"),
   bottomBar: document.getElementById("bottomBar"),
@@ -26,8 +28,13 @@ const els = {
   continueMeta: document.getElementById("continueMeta"),
   continueBtn: document.getElementById("continueBtn"),
 
-  recommendedList: document.getElementById("recommendedList"),
-  recommendedCount: document.getElementById("recommendedCount"),
+  startTodayBtn: document.getElementById("startTodayBtn"),
+  reviewMistakesBtn: document.getElementById("reviewMistakesBtn"),
+  reviewMistakesMeta: document.getElementById("reviewMistakesMeta"),
+  browseCoursesBtn: document.getElementById("browseCoursesBtn"),
+  resetProgressBtn: document.getElementById("resetProgressBtn"),
+  backFromBrowseBtn: document.getElementById("backFromBrowseBtn"),
+
   groupChips: document.getElementById("groupChips"),
   courseGroupTitle: document.getElementById("courseGroupTitle"),
   courseCount: document.getElementById("courseCount"),
@@ -74,14 +81,7 @@ async function init() {
     showScreen("home");
   } catch (error) {
     console.error(error);
-    els.courseList.innerHTML = `
-      <div class="course-row">
-        <div>
-          <strong>Could not load GermanFlash.</strong>
-          <span>Check data/dictionary.json and data/courses.json.</span>
-        </div>
-      </div>
-    `;
+    els.subtitle.textContent = "Data error. Check your JSON files.";
   }
 }
 
@@ -93,18 +93,17 @@ async function fetchJson(path) {
 
 function bindEvents() {
   els.homeBtn.addEventListener("click", () => showScreen("home"));
-  els.backToCoursesBtn.addEventListener("click", () => showScreen("home"));
+  els.backFromBrowseBtn.addEventListener("click", () => showScreen("home"));
+  els.backToCoursesBtn.addEventListener("click", () => showScreen("browse"));
 
-  els.continueBtn.addEventListener("click", () => {
-    if (!state.lastCourseId) return;
-    openCourse(state.lastCourseId);
-    startPractice(state.lastMode || "de-en");
-  });
+  els.continueBtn.addEventListener("click", continueLastCourse);
+  els.startTodayBtn.addEventListener("click", startToday);
+  els.reviewMistakesBtn.addEventListener("click", startMistakeReview);
+  els.browseCoursesBtn.addEventListener("click", () => showScreen("browse"));
+  els.resetProgressBtn.addEventListener("click", resetProgress);
 
   document.querySelectorAll("[data-mode]").forEach((button) => {
-    button.addEventListener("click", () => {
-      startPractice(button.dataset.mode);
-    });
+    button.addEventListener("click", () => startPractice(button.dataset.mode));
   });
 
   els.flashcard.addEventListener("click", flipCard);
@@ -117,6 +116,7 @@ function bindEvents() {
 
 function showScreen(screen) {
   els.homeScreen.classList.remove("active");
+  els.browseScreen.classList.remove("active");
   els.courseScreen.classList.remove("active");
   els.practiceScreen.classList.remove("active");
   els.bottomBar.classList.add("hidden");
@@ -126,6 +126,13 @@ function showScreen(screen) {
     els.homeScreen.classList.add("active");
     els.homeBtn.classList.add("hidden");
     els.subtitle.textContent = "Small lessons. No chaos.";
+  }
+
+  if (screen === "browse") {
+    renderBrowse();
+    els.browseScreen.classList.add("active");
+    els.homeBtn.classList.remove("hidden");
+    els.subtitle.textContent = "Browse only when you need to.";
   }
 
   if (screen === "course") {
@@ -144,7 +151,10 @@ function showScreen(screen) {
 
 function renderHome() {
   renderContinuePanel();
-  renderRecommended();
+  renderReviewButton();
+}
+
+function renderBrowse() {
   renderGroupChips();
   renderCourseList();
 }
@@ -156,6 +166,7 @@ function renderContinuePanel() {
   }
 
   const course = state.courses.find((item) => item.id === state.lastCourseId);
+
   if (!course) {
     els.continuePanel.classList.add("hidden");
     return;
@@ -166,17 +177,16 @@ function renderContinuePanel() {
   els.continuePanel.classList.remove("hidden");
 }
 
-function renderRecommended() {
-  const recommended = state.courses
-    .filter((course) => course.recommended)
-    .slice(0, 3);
+function renderReviewButton() {
+  const count = state.reviewIds.size;
 
-  els.recommendedCount.textContent = `${recommended.length}`;
-  els.recommendedList.innerHTML = "";
+  if (!count) {
+    els.reviewMistakesBtn.classList.add("hidden");
+    return;
+  }
 
-  recommended.forEach((course) => {
-    els.recommendedList.appendChild(createCourseRow(course));
-  });
+  els.reviewMistakesMeta.textContent = `${count} card${count === 1 ? "" : "s"} waiting`;
+  els.reviewMistakesBtn.classList.remove("hidden");
 }
 
 function renderGroupChips() {
@@ -191,7 +201,7 @@ function renderGroupChips() {
 
     button.addEventListener("click", () => {
       state.activeGroup = group;
-      renderHome();
+      renderBrowse();
     });
 
     els.groupChips.appendChild(button);
@@ -231,6 +241,49 @@ function createCourseRow(course) {
   button.addEventListener("click", () => openCourse(course.id));
 
   return button;
+}
+
+function continueLastCourse() {
+  if (!state.lastCourseId) return;
+
+  openCourse(state.lastCourseId);
+  startPractice(state.lastMode || "de-en");
+}
+
+function startToday() {
+  const recommended =
+    state.courses.find((course) => course.recommended) ||
+    state.courses[0];
+
+  if (!recommended) return;
+
+  openCourse(recommended.id);
+  startPractice("de-en");
+}
+
+function startMistakeReview() {
+  const reviewCards = [...state.reviewIds]
+    .map((id) => state.dictionary.find((entry) => entry.id === id))
+    .filter(Boolean);
+
+  if (!reviewCards.length) return;
+
+  state.currentCourse = {
+    id: "review-mistakes",
+    title: "Review Mistakes",
+    group: "Review",
+    level: "Practice",
+    description: "Cards marked for review.",
+    wordIds: reviewCards.map((card) => card.id)
+  };
+
+  state.currentCards = reviewCards;
+  state.currentIndex = 0;
+  state.answerVisible = false;
+  state.currentMode = "de-en";
+
+  showScreen("practice");
+  renderCard();
 }
 
 function openCourse(courseId) {
@@ -384,6 +437,27 @@ function speakCurrentGerman() {
 
   window.speechSynthesis.cancel();
   window.speechSynthesis.speak(utterance);
+}
+
+function resetProgress() {
+  const confirmed = confirm(
+    "Reset all GermanFlash progress on this device?"
+  );
+
+  if (!confirmed) return;
+
+  state.knownIds.clear();
+  state.reviewIds.clear();
+  state.lastCourseId = null;
+  state.lastMode = "de-en";
+
+  localStorage.removeItem("germanflash-progress");
+
+  state.currentIndex = 0;
+  state.answerVisible = false;
+
+  renderHome();
+  showScreen("home");
 }
 
 function saveProgress() {

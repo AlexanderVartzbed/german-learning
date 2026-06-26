@@ -106,7 +106,8 @@ p {
 
 .hero-card,
 .course-detail-card,
-.course-row {
+.course-row,
+.launcher-card {
   background: var(--card);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
@@ -138,6 +139,45 @@ p {
   font-weight: 950;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+
+.launcher-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.launcher-card {
+  width: 100%;
+  min-height: 92px;
+  text-align: left;
+  color: var(--text);
+  border-radius: 26px;
+  padding: 18px;
+}
+
+.launcher-card.primary {
+  background: var(--accent);
+  color: white;
+}
+
+.launcher-card.quiet {
+  background: rgba(255,255,255,0.72);
+}
+
+.launcher-card span {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 950;
+  letter-spacing: -0.03em;
+}
+
+.launcher-card small {
+  display: block;
+  margin-top: 6px;
+  color: inherit;
+  opacity: 0.72;
+  font-size: 0.95rem;
+  font-weight: 800;
 }
 
 .section-block {
