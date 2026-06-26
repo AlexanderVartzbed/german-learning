@@ -1,23 +1,147 @@
 {
+  "purpose": "This file is a future grammar engine. The current app may not use it yet. It stores grammar concepts, examples, and quiz-ready data so later lessons can be generated from structured rules instead of hard-coded screens.",
   "articles": {
     "der": {
       "gender": "masculine",
-      "example": "der Hund"
+      "example": "der Hund",
+      "note": "Learn the article with the noun."
     },
     "die": {
       "gender": "feminine",
-      "example": "die Katze"
+      "example": "die Katze",
+      "note": "Also used for all plural nouns in nominative."
     },
     "das": {
       "gender": "neuter",
-      "example": "das Haus"
+      "example": "das Haus",
+      "note": "Many diminutives ending in -chen are das."
     }
   },
-  "notes": [
+  "cases": [
     {
-      "id": "noun-articles",
-      "title": "German nouns have articles",
-      "body": "Most German nouns should be learned together with their article: der, die, or das."
+      "id": "nominative",
+      "name": "Nominative",
+      "kidExplanation": "The subject. Who or what is doing something?",
+      "example": "Der Hund schläft.",
+      "translation": "The dog sleeps."
+    },
+    {
+      "id": "accusative",
+      "name": "Accusative",
+      "kidExplanation": "The direct object. What is being seen, eaten, or used?",
+      "example": "Ich sehe den Hund.",
+      "translation": "I see the dog."
+    },
+    {
+      "id": "dative",
+      "name": "Dative",
+      "kidExplanation": "Often the receiver or location after certain prepositions.",
+      "example": "Ich helfe dem Kind.",
+      "translation": "I help the child."
+    }
+  ],
+  "articleTable": {
+    "nominative": {
+      "masculine": "der",
+      "feminine": "die",
+      "neuter": "das",
+      "plural": "die"
+    },
+    "accusative": {
+      "masculine": "den",
+      "feminine": "die",
+      "neuter": "das",
+      "plural": "die"
+    },
+    "dative": {
+      "masculine": "dem",
+      "feminine": "der",
+      "neuter": "dem",
+      "plural": "den"
+    }
+  },
+  "verbPatterns": [
+    {
+      "id": "regular-present",
+      "name": "Regular present tense",
+      "exampleVerb": "spielen",
+      "stems": "spiel",
+      "endings": {
+        "ich": "-e",
+        "du": "-st",
+        "er/sie/es": "-t",
+        "wir": "-en",
+        "ihr": "-t",
+        "sie/Sie": "-en"
+      },
+      "examples": [
+        "ich spiele",
+        "du spielst",
+        "er spielt",
+        "wir spielen"
+      ]
+    },
+    {
+      "id": "sein-present",
+      "name": "sein — to be",
+      "forms": {
+        "ich": "bin",
+        "du": "bist",
+        "er/sie/es": "ist",
+        "wir": "sind",
+        "ihr": "seid",
+        "sie/Sie": "sind"
+      }
+    },
+    {
+      "id": "haben-present",
+      "name": "haben — to have",
+      "forms": {
+        "ich": "habe",
+        "du": "hast",
+        "er/sie/es": "hat",
+        "wir": "haben",
+        "ihr": "habt",
+        "sie/Sie": "haben"
+      }
+    }
+  ],
+  "sentencePatterns": [
+    {
+      "id": "simple-noun-adjective",
+      "pattern": "Der/Die/Das + noun + ist + adjective.",
+      "example": "Der Hund ist groß.",
+      "translation": "The dog is big."
+    },
+    {
+      "id": "i-like",
+      "pattern": "Ich mag + noun/thing.",
+      "example": "Ich mag Wasser.",
+      "translation": "I like water."
+    },
+    {
+      "id": "i-have",
+      "pattern": "Ich habe + noun.",
+      "example": "Ich habe ein Buch.",
+      "translation": "I have a book."
+    }
+  ],
+  "quizIdeas": [
+    {
+      "type": "article-quiz",
+      "prompt": "Choose der, die, or das for a noun."
+    },
+    {
+      "type": "case-quiz",
+      "prompt": "Choose the correct article in a short sentence."
+    },
+    {
+      "type": "verb-form-quiz",
+      "prompt": "Choose the correct present-tense verb form."
+    },
+    {
+      "type": "sentence-builder",
+      "prompt": "Build a sentence from given words."
     }
   ]
 }

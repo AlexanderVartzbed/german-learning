@@ -7,7 +7,79 @@
     "order": 1,
     "recommended": true,
     "description": "A small mixed beginner deck.",
-    "wordIds": [1001, 1002, 1101, 1201, 1202, 1301, 1302, 1401, 1402]
+    "wordIds": [
+      1001,
+      1002,
+      1101,
+      1201,
+      1202,
+      2003,
+      2016,
+      3001,
+      3002
+    ]
+  },
+  {
+    "id": "starter-mix-02",
+    "title": "Starter Mix 2",
+    "group": "Start Here",
+    "level": "A1",
+    "order": 2,
+    "recommended": true,
+    "description": "Another gentle mixed deck.",
+    "wordIds": [
+      1301,
+      1302,
+      1401,
+      1402,
+      1501,
+      1506,
+      2001,
+      2002,
+      3008,
+      3010
+    ]
+  },
+  {
+    "id": "greetings-01",
+    "title": "Greetings",
+    "group": "Start Here",
+    "level": "A1",
+    "order": 3,
+    "recommended": true,
+    "description": "Basic hello, goodbye, and polite phrases.",
+    "wordIds": [
+      4001,
+      4002,
+      4003,
+      4004,
+      4005,
+      4006,
+      4007,
+      4008,
+      4009
+    ]
+  },
+  {
+    "id": "classroom-phrases-01",
+    "title": "Classroom Phrases",
+    "group": "Start Here",
+    "level": "A1",
+    "order": 4,
+    "recommended": true,
+    "description": "Useful German for learning sessions.",
+    "wordIds": [
+      4012,
+      4013,
+      4014,
+      4023,
+      4024,
+      4030,
+      4031,
+      4032,
+      4033,
+      4034
+    ]
   },
   {
     "id": "animals-01",
@@ -16,8 +88,40 @@
     "level": "A1",
     "order": 1,
     "recommended": true,
-    "description": "Basic animal vocabulary.",
-    "wordIds": [1001, 1002, 1003, 1004, 1005]
+    "description": "Pets and familiar animals.",
+    "wordIds": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ]
+  },
+  {
+    "id": "animals-02",
+    "title": "Animals 2",
+    "group": "Animals",
+    "level": "A1",
+    "order": 2,
+    "recommended": false,
+    "description": "More animals.",
+    "wordIds": [
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019,
+      1020
+    ]
   },
   {
     "id": "home-01",
@@ -25,9 +129,41 @@
     "group": "Home",
     "level": "A1",
     "order": 1,
+    "recommended": true,
+    "description": "Rooms and basic home items.",
+    "wordIds": [
+      1101,
+      1102,
+      1103,
+      1104,
+      1105,
+      1106,
+      1107,
+      1108,
+      1109,
+      1110
+    ]
+  },
+  {
+    "id": "home-02",
+    "title": "Home 2",
+    "group": "Home",
+    "level": "A1",
+    "order": 2,
     "recommended": false,
-    "description": "Simple words around the house.",
-    "wordIds": [1101, 1102, 1103, 1104]
+    "description": "More things around the house.",
+    "wordIds": [
+      1111,
+      1112,
+      1113,
+      1114,
+      1115,
+      1116,
+      1117,
+      1118,
+      1119,
+      1120
+    ]
   },
   {
     "id": "food-01",
@@ -36,18 +172,350 @@
     "level": "A1",
     "order": 1,
     "recommended": true,
-    "description": "Basic food and drink vocabulary.",
-    "wordIds": [1201, 1202, 1203, 1204]
+    "description": "Basic food and drink.",
+    "wordIds": [
+      1201,
+      1202,
+      1203,
+      1204,
+      1205,
+      1206,
+      1207,
+      1208,
+      1209,
+      1210
+    ]
   },
   {
-    "id": "verbs-01",
-    "title": "Verbs 1",
-    "group": "Verbs",
+    "id": "food-02",
+    "title": "Food 2",
+    "group": "Food & Drink",
+    "level": "A1",
+    "order": 2,
+    "recommended": false,
+    "description": "More food and treats.",
+    "wordIds": [
+      1211,
+      1212,
+      1213,
+      1214,
+      1215,
+      1216,
+      1217,
+      1218,
+      1219,
+      1220
+    ]
+  },
+  {
+    "id": "family-people-01",
+    "title": "Family",
+    "group": "People",
+    "level": "A1",
+    "order": 1,
+    "recommended": true,
+    "description": "Family words.",
+    "wordIds": [
+      1301,
+      1302,
+      1303,
+      1304,
+      1305,
+      1306,
+      1307,
+      1308
+    ]
+  },
+  {
+    "id": "people-01",
+    "title": "People & Jobs",
+    "group": "People",
+    "level": "A1",
+    "order": 2,
+    "recommended": false,
+    "description": "People and simple jobs.",
+    "wordIds": [
+      1309,
+      1310,
+      1311,
+      1312,
+      1313,
+      1314,
+      1315,
+      1316
+    ]
+  },
+  {
+    "id": "school-01",
+    "title": "School 1",
+    "group": "School",
+    "level": "A1",
+    "order": 1,
+    "recommended": true,
+    "description": "School objects and words.",
+    "wordIds": [
+      1401,
+      1402,
+      1403,
+      1404,
+      1405,
+      1406,
+      1407,
+      1408
+    ]
+  },
+  {
+    "id": "school-02",
+    "title": "School 2",
+    "group": "School",
+    "level": "A1",
+    "order": 2,
+    "recommended": false,
+    "description": "More school and kid words.",
+    "wordIds": [
+      1409,
+      1410,
+      1411,
+      1412,
+      1413,
+      1414,
+      1415,
+      1416
+    ]
+  },
+  {
+    "id": "body-01",
+    "title": "Body",
+    "group": "Body",
+    "level": "A1",
+    "order": 1,
+    "recommended": true,
+    "description": "Parts of the body.",
+    "wordIds": [
+      1501,
+      1502,
+      1503,
+      1504,
+      1505,
+      1506,
+      1507,
+      1508,
+      1509,
+      1510,
+      1511,
+      1512
+    ]
+  },
+  {
+    "id": "transport-01",
+    "title": "Transport",
+    "group": "Transport",
     "level": "A1",
     "order": 1,
     "recommended": false,
-    "description": "Starter verbs.",
-    "wordIds": [1301, 1302, 1303, 1304]
+    "description": "Vehicles and getting around.",
+    "wordIds": [
+      1601,
+      1602,
+      1603,
+      1604,
+      1605,
+      1606,
+      1607,
+      1608,
+      1609,
+      1610
+    ]
+  },
+  {
+    "id": "time-01",
+    "title": "Time",
+    "group": "Time",
+    "level": "A1",
+    "order": 1,
+    "recommended": false,
+    "description": "Days, weeks, and time words.",
+    "wordIds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705,
+      1706,
+      1707,
+      1708,
+      1709
+    ]
+  },
+  {
+    "id": "nature-weather-01",
+    "title": "Nature & Weather",
+    "group": "Nature",
+    "level": "A1",
+    "order": 1,
+    "recommended": false,
+    "description": "Nature and weather words.",
+    "wordIds": [
+      1801,
+      1802,
+      1803,
+      1804,
+      1805,
+      1806,
+      1807,
+      1808,
+      1809,
+      1810,
+      1811,
+      1812
+    ]
+  },
+  {
+    "id": "city-01",
+    "title": "City",
+    "group": "City",
+    "level": "A1",
+    "order": 1,
+    "recommended": false,
+    "description": "Places in town.",
+    "wordIds": [
+      1901,
+      1902,
+      1903,
+      1904,
+      1905,
+      1906,
+      1907,
+      1908,
+      1909,
+      1910
+    ]
+  },
+  {
+    "id": "verbs-core-01",
+    "title": "Core Verbs 1",
+    "group": "Verbs",
+    "level": "A1",
+    "order": 1,
+    "recommended": true,
+    "description": "The most useful beginner verbs.",
+    "wordIds": [
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010
+    ]
+  },
+  {
+    "id": "verbs-core-02",
+    "title": "Core Verbs 2",
+    "group": "Verbs",
+    "level": "A1",
+    "order": 2,
+    "recommended": true,
+    "description": "More essential verbs.",
+    "wordIds": [
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "verbs-actions-01",
+    "title": "Action Verbs",
+    "group": "Verbs",
+    "level": "A1",
+    "order": 3,
+    "recommended": false,
+    "description": "Doing, moving, making.",
+    "wordIds": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ]
+  },
+  {
+    "id": "verbs-modal-01",
+    "title": "Want / Can / Must",
+    "group": "Verbs",
+    "level": "A1",
+    "order": 4,
+    "recommended": false,
+    "description": "Simple modal verbs.",
+    "wordIds": [
+      2031,
+      2032,
+      2033,
+      2034,
+      2035,
+      2036,
+      2037
+    ]
+  },
+  {
+    "id": "verbs-daily-01",
+    "title": "Daily Verbs",
+    "group": "Verbs",
+    "level": "A1",
+    "order": 5,
+    "recommended": false,
+    "description": "Daily life and useful actions.",
+    "wordIds": [
+      2038,
+      2039,
+      2040,
+      2041,
+      2042,
+      2043,
+      2044,
+      2045,
+      2046,
+      2047,
+      2048,
+      2049,
+      2050
+    ]
+  },
+  {
+    "id": "verbs-thinking-01",
+    "title": "Thinking Verbs",
+    "group": "Verbs",
+    "level": "A1",
+    "order": 6,
+    "recommended": false,
+    "description": "Thinking, knowing, understanding.",
+    "wordIds": [
+      2051,
+      2052,
+      2053,
+      2054,
+      2055,
+      2056,
+      2057,
+      2058,
+      2059,
+      2060
+    ]
   },
   {
     "id": "adjectives-01",
@@ -55,8 +523,275 @@
     "group": "Adjectives",
     "level": "A1",
     "order": 1,
+    "recommended": true,
+    "description": "Basic describing words.",
+    "wordIds": [
+      3001,
+      3002,
+      3003,
+      3004,
+      3005,
+      3006,
+      3007,
+      3008,
+      3009,
+      3010
+    ]
+  },
+  {
+    "id": "adjectives-02",
+    "title": "Adjectives 2",
+    "group": "Adjectives",
+    "level": "A1",
+    "order": 2,
     "recommended": false,
-    "description": "Simple describing words.",
-    "wordIds": [1401, 1402, 1403, 1404]
+    "description": "More describing words.",
+    "wordIds": [
+      3011,
+      3012,
+      3013,
+      3014,
+      3015,
+      3016,
+      3017,
+      3018,
+      3019,
+      3020
+    ]
+  },
+  {
+    "id": "adjectives-03",
+    "title": "Adjectives 3",
+    "group": "Adjectives",
+    "level": "A1",
+    "order": 3,
+    "recommended": false,
+    "description": "Feelings and qualities.",
+    "wordIds": [
+      3021,
+      3022,
+      3023,
+      3024,
+      3025,
+      3026,
+      3027,
+      3028,
+      3029,
+      3030,
+      3031,
+      3032,
+      3033,
+      3034,
+      3035,
+      3036,
+      3037,
+      3038,
+      3039,
+      3040
+    ]
+  },
+  {
+    "id": "colors-01",
+    "title": "Colors",
+    "group": "Colors & Numbers",
+    "level": "A1",
+    "order": 1,
+    "recommended": true,
+    "description": "Basic colors.",
+    "wordIds": [
+      3101,
+      3102,
+      3103,
+      3104,
+      3105,
+      3106,
+      3107,
+      3108,
+      3109,
+      3110,
+      3111
+    ]
+  },
+  {
+    "id": "numbers-01",
+    "title": "Numbers 0–10",
+    "group": "Colors & Numbers",
+    "level": "A1",
+    "order": 2,
+    "recommended": true,
+    "description": "Numbers from zero to ten.",
+    "wordIds": [
+      3200,
+      3201,
+      3202,
+      3203,
+      3204,
+      3205,
+      3206,
+      3207,
+      3208,
+      3209,
+      3210
+    ]
+  },
+  {
+    "id": "numbers-02",
+    "title": "Numbers 11–20",
+    "group": "Colors & Numbers",
+    "level": "A1",
+    "order": 3,
+    "recommended": false,
+    "description": "Numbers from eleven to twenty.",
+    "wordIds": [
+      3211,
+      3212,
+      3213,
+      3214,
+      3215,
+      3216,
+      3217,
+      3218,
+      3219,
+      3220
+    ]
+  },
+  {
+    "id": "pronouns-01",
+    "title": "Pronouns",
+    "group": "Grammar Words",
+    "level": "A1",
+    "order": 1,
+    "recommended": true,
+    "description": "I, you, he, she, we.",
+    "wordIds": [
+      5001,
+      5002,
+      5003,
+      5004,
+      5005,
+      5006,
+      5007,
+      5008
+    ]
+  },
+  {
+    "id": "possessives-01",
+    "title": "My / Your / His",
+    "group": "Grammar Words",
+    "level": "A1",
+    "order": 2,
+    "recommended": false,
+    "description": "Simple possessive words.",
+    "wordIds": [
+      5010,
+      5011,
+      5012,
+      5013
+    ]
+  },
+  {
+    "id": "prepositions-01",
+    "title": "Prepositions 1",
+    "group": "Grammar Words",
+    "level": "A1",
+    "order": 3,
+    "recommended": false,
+    "description": "Where things are.",
+    "wordIds": [
+      5020,
+      5021,
+      5022,
+      5023,
+      5024,
+      5025,
+      5026,
+      5027,
+      5028,
+      5029
+    ]
+  },
+  {
+    "id": "connectors-01",
+    "title": "And / Or / But",
+    "group": "Grammar Words",
+    "level": "A1",
+    "order": 4,
+    "recommended": false,
+    "description": "Simple connecting words.",
+    "wordIds": [
+      5030,
+      5031,
+      5032,
+      5033
+    ]
+  },
+  {
+    "id": "adverbs-01",
+    "title": "Time & Place Words",
+    "group": "Grammar Words",
+    "level": "A1",
+    "order": 5,
+    "recommended": false,
+    "description": "Today, here, there, sometimes.",
+    "wordIds": [
+      5040,
+      5041,
+      5042,
+      5043,
+      5044,
+      5045,
+      5046,
+      5047,
+      5048,
+      5049
+    ]
+  },
+  {
+    "id": "phrases-questions-01",
+    "title": "Questions",
+    "group": "Phrases",
+    "level": "A1",
+    "order": 1,
+    "recommended": false,
+    "description": "Useful beginner questions.",
+    "wordIds": [
+      4015,
+      4017,
+      4022,
+      4023,
+      4024,
+      4033
+    ]
+  },
+  {
+    "id": "phrases-feelings-01",
+    "title": "Feelings Phrases",
+    "group": "Phrases",
+    "level": "A1",
+    "order": 2,
+    "recommended": false,
+    "description": "Simple sentences about feelings.",
+    "wordIds": [
+      4017,
+      4018,
+      4019,
+      4020,
+      4021
+    ]
+  },
+  {
+    "id": "phrases-opinions-01",
+    "title": "Opinions",
+    "group": "Phrases",
+    "level": "A1",
+    "order": 3,
+    "recommended": false,
+    "description": "Like, dislike, good, difficult.",
+    "wordIds": [
+      4026,
+      4027,
+      4028,
+      4029
+    ]
   }
 ]

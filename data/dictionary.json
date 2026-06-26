@@ -7,7 +7,10 @@
     "plural": "Hunde",
     "english": "dog",
     "level": "A1",
-    "tags": ["animals", "pets"]
+    "tags": [
+      "animals",
+      "pets"
+    ]
   },
   {
     "id": 1002,
@@ -17,7 +20,10 @@
     "plural": "Katzen",
     "english": "cat",
     "level": "A1",
-    "tags": ["animals", "pets"]
+    "tags": [
+      "animals",
+      "pets"
+    ]
   },
   {
     "id": 1003,
@@ -27,7 +33,9 @@
     "plural": "Vögel",
     "english": "bird",
     "level": "A1",
-    "tags": ["animals"]
+    "tags": [
+      "animals"
+    ]
   },
   {
     "id": 1004,
@@ -37,7 +45,9 @@
     "plural": "Pferde",
     "english": "horse",
     "level": "A1",
-    "tags": ["animals"]
+    "tags": [
+      "animals"
+    ]
   },
   {
     "id": 1005,
@@ -47,7 +57,195 @@
     "plural": "Mäuse",
     "english": "mouse",
     "level": "A1",
-    "tags": ["animals"]
+    "tags": [
+      "animals"
+    ]
+  },
+  {
+    "id": 1006,
+    "type": "noun",
+    "word": "Fisch",
+    "article": "der",
+    "plural": "Fische",
+    "english": "fish",
+    "level": "A1",
+    "tags": [
+      "animals"
+    ]
+  },
+  {
+    "id": 1007,
+    "type": "noun",
+    "word": "Kuh",
+    "article": "die",
+    "plural": "Kühe",
+    "english": "cow",
+    "level": "A1",
+    "tags": [
+      "animals",
+      "farm"
+    ]
+  },
+  {
+    "id": 1008,
+    "type": "noun",
+    "word": "Schwein",
+    "article": "das",
+    "plural": "Schweine",
+    "english": "pig",
+    "level": "A1",
+    "tags": [
+      "animals",
+      "farm"
+    ]
+  },
+  {
+    "id": 1009,
+    "type": "noun",
+    "word": "Huhn",
+    "article": "das",
+    "plural": "Hühner",
+    "english": "chicken",
+    "level": "A1",
+    "tags": [
+      "animals",
+      "farm"
+    ]
+  },
+  {
+    "id": 1010,
+    "type": "noun",
+    "word": "Ente",
+    "article": "die",
+    "plural": "Enten",
+    "english": "duck",
+    "level": "A1",
+    "tags": [
+      "animals"
+    ]
+  },
+  {
+    "id": 1011,
+    "type": "noun",
+    "word": "Schaf",
+    "article": "das",
+    "plural": "Schafe",
+    "english": "sheep",
+    "level": "A1",
+    "tags": [
+      "animals",
+      "farm"
+    ]
+  },
+  {
+    "id": 1012,
+    "type": "noun",
+    "word": "Ziege",
+    "article": "die",
+    "plural": "Ziegen",
+    "english": "goat",
+    "level": "A1",
+    "tags": [
+      "animals",
+      "farm"
+    ]
+  },
+  {
+    "id": 1013,
+    "type": "noun",
+    "word": "Bär",
+    "article": "der",
+    "plural": "Bären",
+    "english": "bear",
+    "level": "A1",
+    "tags": [
+      "animals"
+    ]
+  },
+  {
+    "id": 1014,
+    "type": "noun",
+    "word": "Löwe",
+    "article": "der",
+    "plural": "Löwen",
+    "english": "lion",
+    "level": "A1",
+    "tags": [
+      "animals"
+    ]
+  },
+  {
+    "id": 1015,
+    "type": "noun",
+    "word": "Tiger",
+    "article": "der",
+    "plural": "Tiger",
+    "english": "tiger",
+    "level": "A1",
+    "tags": [
+      "animals"
+    ]
+  },
+  {
+    "id": 1016,
+    "type": "noun",
+    "word": "Affe",
+    "article": "der",
+    "plural": "Affen",
+    "english": "monkey",
+    "level": "A1",
+    "tags": [
+      "animals"
+    ]
+  },
+  {
+    "id": 1017,
+    "type": "noun",
+    "word": "Elefant",
+    "article": "der",
+    "plural": "Elefanten",
+    "english": "elephant",
+    "level": "A1",
+    "tags": [
+      "animals"
+    ]
+  },
+  {
+    "id": 1018,
+    "type": "noun",
+    "word": "Giraffe",
+    "article": "die",
+    "plural": "Giraffen",
+    "english": "giraffe",
+    "level": "A1",
+    "tags": [
+      "animals"
+    ]
+  },
+  {
+    "id": 1019,
+    "type": "noun",
+    "word": "Frosch",
+    "article": "der",
+    "plural": "Frösche",
+    "english": "frog",
+    "level": "A1",
+    "tags": [
+      "animals"
+    ]
+  },
+  {
+    "id": 1020,
+    "type": "noun",
+    "word": "Biene",
+    "article": "die",
+    "plural": "Bienen",
+    "english": "bee",
+    "level": "A1",
+    "tags": [
+      "animals",
+      "insects"
+    ]
   },
   {
     "id": 1101,
@@ -57,7 +255,9 @@
     "plural": "Häuser",
     "english": "house",
     "level": "A1",
-    "tags": ["home"]
+    "tags": [
+      "home"
+    ]
   },
   {
     "id": 1102,
@@ -67,7 +267,9 @@
     "plural": "Türen",
     "english": "door",
     "level": "A1",
-    "tags": ["home"]
+    "tags": [
+      "home"
+    ]
   },
   {
     "id": 1103,
@@ -77,7 +279,9 @@
     "plural": "Fenster",
     "english": "window",
     "level": "A1",
-    "tags": ["home"]
+    "tags": [
+      "home"
+    ]
   },
   {
     "id": 1104,
@@ -87,7 +291,205 @@
     "plural": "Zimmer",
     "english": "room",
     "level": "A1",
-    "tags": ["home"]
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": 1105,
+    "type": "noun",
+    "word": "Küche",
+    "article": "die",
+    "plural": "Küchen",
+    "english": "kitchen",
+    "level": "A1",
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": 1106,
+    "type": "noun",
+    "word": "Bad",
+    "article": "das",
+    "plural": "Bäder",
+    "english": "bathroom",
+    "level": "A1",
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": 1107,
+    "type": "noun",
+    "word": "Bett",
+    "article": "das",
+    "plural": "Betten",
+    "english": "bed",
+    "level": "A1",
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": 1108,
+    "type": "noun",
+    "word": "Stuhl",
+    "article": "der",
+    "plural": "Stühle",
+    "english": "chair",
+    "level": "A1",
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": 1109,
+    "type": "noun",
+    "word": "Tisch",
+    "article": "der",
+    "plural": "Tische",
+    "english": "table",
+    "level": "A1",
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": 1110,
+    "type": "noun",
+    "word": "Sofa",
+    "article": "das",
+    "plural": "Sofas",
+    "english": "sofa",
+    "level": "A1",
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": 1111,
+    "type": "noun",
+    "word": "Lampe",
+    "article": "die",
+    "plural": "Lampen",
+    "english": "lamp",
+    "level": "A1",
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": 1112,
+    "type": "noun",
+    "word": "Schrank",
+    "article": "der",
+    "plural": "Schränke",
+    "english": "cupboard",
+    "level": "A1",
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": 1113,
+    "type": "noun",
+    "word": "Teppich",
+    "article": "der",
+    "plural": "Teppiche",
+    "english": "carpet",
+    "level": "A1",
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": 1114,
+    "type": "noun",
+    "word": "Wand",
+    "article": "die",
+    "plural": "Wände",
+    "english": "wall",
+    "level": "A1",
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": 1115,
+    "type": "noun",
+    "word": "Dach",
+    "article": "das",
+    "plural": "Dächer",
+    "english": "roof",
+    "level": "A1",
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": 1116,
+    "type": "noun",
+    "word": "Garten",
+    "article": "der",
+    "plural": "Gärten",
+    "english": "garden",
+    "level": "A1",
+    "tags": [
+      "home",
+      "outside"
+    ]
+  },
+  {
+    "id": 1117,
+    "type": "noun",
+    "word": "Treppe",
+    "article": "die",
+    "plural": "Treppen",
+    "english": "stairs",
+    "level": "A1",
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": 1118,
+    "type": "noun",
+    "word": "Schlüssel",
+    "article": "der",
+    "plural": "Schlüssel",
+    "english": "key",
+    "level": "A1",
+    "tags": [
+      "home",
+      "objects"
+    ]
+  },
+  {
+    "id": 1119,
+    "type": "noun",
+    "word": "Uhr",
+    "article": "die",
+    "plural": "Uhren",
+    "english": "clock/watch",
+    "level": "A1",
+    "tags": [
+      "home",
+      "time"
+    ]
+  },
+  {
+    "id": 1120,
+    "type": "noun",
+    "word": "Bild",
+    "article": "das",
+    "plural": "Bilder",
+    "english": "picture",
+    "level": "A1",
+    "tags": [
+      "home",
+      "objects"
+    ]
   },
   {
     "id": 1201,
@@ -97,17 +499,21 @@
     "plural": "Brote",
     "english": "bread",
     "level": "A1",
-    "tags": ["food"]
+    "tags": [
+      "food"
+    ]
   },
   {
     "id": 1202,
     "type": "noun",
     "word": "Wasser",
     "article": "das",
-    "plural": null,
     "english": "water",
     "level": "A1",
-    "tags": ["food", "drink"]
+    "tags": [
+      "food",
+      "drink"
+    ]
   },
   {
     "id": 1203,
@@ -117,80 +523,3429 @@
     "plural": "Äpfel",
     "english": "apple",
     "level": "A1",
-    "tags": ["food", "fruit"]
+    "tags": [
+      "food",
+      "fruit"
+    ]
   },
   {
     "id": 1204,
     "type": "noun",
     "word": "Milch",
     "article": "die",
-    "plural": null,
     "english": "milk",
     "level": "A1",
-    "tags": ["food", "drink"]
+    "tags": [
+      "food",
+      "drink"
+    ]
+  },
+  {
+    "id": 1205,
+    "type": "noun",
+    "word": "Käse",
+    "article": "der",
+    "english": "cheese",
+    "level": "A1",
+    "tags": [
+      "food"
+    ]
+  },
+  {
+    "id": 1206,
+    "type": "noun",
+    "word": "Ei",
+    "article": "das",
+    "plural": "Eier",
+    "english": "egg",
+    "level": "A1",
+    "tags": [
+      "food"
+    ]
+  },
+  {
+    "id": 1207,
+    "type": "noun",
+    "word": "Banane",
+    "article": "die",
+    "plural": "Bananen",
+    "english": "banana",
+    "level": "A1",
+    "tags": [
+      "food",
+      "fruit"
+    ]
+  },
+  {
+    "id": 1208,
+    "type": "noun",
+    "word": "Orange",
+    "article": "die",
+    "plural": "Orangen",
+    "english": "orange",
+    "level": "A1",
+    "tags": [
+      "food",
+      "fruit"
+    ]
+  },
+  {
+    "id": 1209,
+    "type": "noun",
+    "word": "Tomate",
+    "article": "die",
+    "plural": "Tomaten",
+    "english": "tomato",
+    "level": "A1",
+    "tags": [
+      "food",
+      "vegetables"
+    ]
+  },
+  {
+    "id": 1210,
+    "type": "noun",
+    "word": "Kartoffel",
+    "article": "die",
+    "plural": "Kartoffeln",
+    "english": "potato",
+    "level": "A1",
+    "tags": [
+      "food",
+      "vegetables"
+    ]
+  },
+  {
+    "id": 1211,
+    "type": "noun",
+    "word": "Karotte",
+    "article": "die",
+    "plural": "Karotten",
+    "english": "carrot",
+    "level": "A1",
+    "tags": [
+      "food",
+      "vegetables"
+    ]
+  },
+  {
+    "id": 1212,
+    "type": "noun",
+    "word": "Reis",
+    "article": "der",
+    "english": "rice",
+    "level": "A1",
+    "tags": [
+      "food"
+    ]
+  },
+  {
+    "id": 1213,
+    "type": "noun",
+    "word": "Nudel",
+    "article": "die",
+    "plural": "Nudeln",
+    "english": "noodle",
+    "level": "A1",
+    "tags": [
+      "food"
+    ]
+  },
+  {
+    "id": 1214,
+    "type": "noun",
+    "word": "Suppe",
+    "article": "die",
+    "plural": "Suppen",
+    "english": "soup",
+    "level": "A1",
+    "tags": [
+      "food"
+    ]
+  },
+  {
+    "id": 1215,
+    "type": "noun",
+    "word": "Fleisch",
+    "article": "das",
+    "english": "meat",
+    "level": "A1",
+    "tags": [
+      "food"
+    ]
+  },
+  {
+    "id": 1216,
+    "type": "noun",
+    "word": "Hähnchen",
+    "article": "das",
+    "plural": "Hähnchen",
+    "english": "chicken meat",
+    "level": "A1",
+    "tags": [
+      "food"
+    ]
+  },
+  {
+    "id": 1217,
+    "type": "noun",
+    "word": "Saft",
+    "article": "der",
+    "plural": "Säfte",
+    "english": "juice",
+    "level": "A1",
+    "tags": [
+      "food",
+      "drink"
+    ]
+  },
+  {
+    "id": 1218,
+    "type": "noun",
+    "word": "Tee",
+    "article": "der",
+    "plural": "Tees",
+    "english": "tea",
+    "level": "A1",
+    "tags": [
+      "food",
+      "drink"
+    ]
+  },
+  {
+    "id": 1219,
+    "type": "noun",
+    "word": "Kuchen",
+    "article": "der",
+    "plural": "Kuchen",
+    "english": "cake",
+    "level": "A1",
+    "tags": [
+      "food",
+      "sweet"
+    ]
+  },
+  {
+    "id": 1220,
+    "type": "noun",
+    "word": "Eis",
+    "article": "das",
+    "english": "ice cream",
+    "level": "A1",
+    "tags": [
+      "food",
+      "sweet"
+    ]
   },
   {
     "id": 1301,
+    "type": "noun",
+    "word": "Mutter",
+    "article": "die",
+    "plural": "Mütter",
+    "english": "mother",
+    "level": "A1",
+    "tags": [
+      "family",
+      "people"
+    ]
+  },
+  {
+    "id": 1302,
+    "type": "noun",
+    "word": "Vater",
+    "article": "der",
+    "plural": "Väter",
+    "english": "father",
+    "level": "A1",
+    "tags": [
+      "family",
+      "people"
+    ]
+  },
+  {
+    "id": 1303,
+    "type": "noun",
+    "word": "Kind",
+    "article": "das",
+    "plural": "Kinder",
+    "english": "child",
+    "level": "A1",
+    "tags": [
+      "family",
+      "people"
+    ]
+  },
+  {
+    "id": 1304,
+    "type": "noun",
+    "word": "Bruder",
+    "article": "der",
+    "plural": "Brüder",
+    "english": "brother",
+    "level": "A1",
+    "tags": [
+      "family",
+      "people"
+    ]
+  },
+  {
+    "id": 1305,
+    "type": "noun",
+    "word": "Schwester",
+    "article": "die",
+    "plural": "Schwestern",
+    "english": "sister",
+    "level": "A1",
+    "tags": [
+      "family",
+      "people"
+    ]
+  },
+  {
+    "id": 1306,
+    "type": "noun",
+    "word": "Oma",
+    "article": "die",
+    "plural": "Omas",
+    "english": "grandma",
+    "level": "A1",
+    "tags": [
+      "family",
+      "people"
+    ]
+  },
+  {
+    "id": 1307,
+    "type": "noun",
+    "word": "Opa",
+    "article": "der",
+    "plural": "Opas",
+    "english": "grandpa",
+    "level": "A1",
+    "tags": [
+      "family",
+      "people"
+    ]
+  },
+  {
+    "id": 1308,
+    "type": "noun",
+    "word": "Baby",
+    "article": "das",
+    "plural": "Babys",
+    "english": "baby",
+    "level": "A1",
+    "tags": [
+      "family",
+      "people"
+    ]
+  },
+  {
+    "id": 1309,
+    "type": "noun",
+    "word": "Freund",
+    "article": "der",
+    "plural": "Freunde",
+    "english": "friend (male)",
+    "level": "A1",
+    "tags": [
+      "people",
+      "friends"
+    ]
+  },
+  {
+    "id": 1310,
+    "type": "noun",
+    "word": "Freundin",
+    "article": "die",
+    "plural": "Freundinnen",
+    "english": "friend (female)",
+    "level": "A1",
+    "tags": [
+      "people",
+      "friends"
+    ]
+  },
+  {
+    "id": 1311,
+    "type": "noun",
+    "word": "Lehrer",
+    "article": "der",
+    "plural": "Lehrer",
+    "english": "teacher (male)",
+    "level": "A1",
+    "tags": [
+      "school",
+      "people"
+    ]
+  },
+  {
+    "id": 1312,
+    "type": "noun",
+    "word": "Lehrerin",
+    "article": "die",
+    "plural": "Lehrerinnen",
+    "english": "teacher (female)",
+    "level": "A1",
+    "tags": [
+      "school",
+      "people"
+    ]
+  },
+  {
+    "id": 1313,
+    "type": "noun",
+    "word": "Arzt",
+    "article": "der",
+    "plural": "Ärzte",
+    "english": "doctor (male)",
+    "level": "A1",
+    "tags": [
+      "people",
+      "jobs"
+    ]
+  },
+  {
+    "id": 1314,
+    "type": "noun",
+    "word": "Ärztin",
+    "article": "die",
+    "plural": "Ärztinnen",
+    "english": "doctor (female)",
+    "level": "A1",
+    "tags": [
+      "people",
+      "jobs"
+    ]
+  },
+  {
+    "id": 1315,
+    "type": "noun",
+    "word": "Mann",
+    "article": "der",
+    "plural": "Männer",
+    "english": "man",
+    "level": "A1",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": 1316,
+    "type": "noun",
+    "word": "Frau",
+    "article": "die",
+    "plural": "Frauen",
+    "english": "woman",
+    "level": "A1",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": 1401,
+    "type": "noun",
+    "word": "Schule",
+    "article": "die",
+    "plural": "Schulen",
+    "english": "school",
+    "level": "A1",
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": 1402,
+    "type": "noun",
+    "word": "Buch",
+    "article": "das",
+    "plural": "Bücher",
+    "english": "book",
+    "level": "A1",
+    "tags": [
+      "school",
+      "objects"
+    ]
+  },
+  {
+    "id": 1403,
+    "type": "noun",
+    "word": "Heft",
+    "article": "das",
+    "plural": "Hefte",
+    "english": "notebook",
+    "level": "A1",
+    "tags": [
+      "school",
+      "objects"
+    ]
+  },
+  {
+    "id": 1404,
+    "type": "noun",
+    "word": "Stift",
+    "article": "der",
+    "plural": "Stifte",
+    "english": "pen",
+    "level": "A1",
+    "tags": [
+      "school",
+      "objects"
+    ]
+  },
+  {
+    "id": 1405,
+    "type": "noun",
+    "word": "Bleistift",
+    "article": "der",
+    "plural": "Bleistifte",
+    "english": "pencil",
+    "level": "A1",
+    "tags": [
+      "school",
+      "objects"
+    ]
+  },
+  {
+    "id": 1406,
+    "type": "noun",
+    "word": "Tasche",
+    "article": "die",
+    "plural": "Taschen",
+    "english": "bag",
+    "level": "A1",
+    "tags": [
+      "school",
+      "objects"
+    ]
+  },
+  {
+    "id": 1407,
+    "type": "noun",
+    "word": "Rucksack",
+    "article": "der",
+    "plural": "Rucksäcke",
+    "english": "backpack",
+    "level": "A1",
+    "tags": [
+      "school",
+      "objects"
+    ]
+  },
+  {
+    "id": 1408,
+    "type": "noun",
+    "word": "Papier",
+    "article": "das",
+    "plural": "Papiere",
+    "english": "paper",
+    "level": "A1",
+    "tags": [
+      "school",
+      "objects"
+    ]
+  },
+  {
+    "id": 1409,
+    "type": "noun",
+    "word": "Computer",
+    "article": "der",
+    "plural": "Computer",
+    "english": "computer",
+    "level": "A1",
+    "tags": [
+      "school",
+      "technology"
+    ]
+  },
+  {
+    "id": 1410,
+    "type": "noun",
+    "word": "Handy",
+    "article": "das",
+    "plural": "Handys",
+    "english": "mobile phone",
+    "level": "A1",
+    "tags": [
+      "technology"
+    ]
+  },
+  {
+    "id": 1411,
+    "type": "noun",
+    "word": "Spiel",
+    "article": "das",
+    "plural": "Spiele",
+    "english": "game",
+    "level": "A1",
+    "tags": [
+      "kids",
+      "objects"
+    ]
+  },
+  {
+    "id": 1412,
+    "type": "noun",
+    "word": "Ball",
+    "article": "der",
+    "plural": "Bälle",
+    "english": "ball",
+    "level": "A1",
+    "tags": [
+      "kids",
+      "objects",
+      "sports"
+    ]
+  },
+  {
+    "id": 1413,
+    "type": "noun",
+    "word": "Musik",
+    "article": "die",
+    "english": "music",
+    "level": "A1",
+    "tags": [
+      "school",
+      "arts"
+    ]
+  },
+  {
+    "id": 1414,
+    "type": "noun",
+    "word": "Pause",
+    "article": "die",
+    "plural": "Pausen",
+    "english": "break/recess",
+    "level": "A1",
+    "tags": [
+      "school",
+      "time"
+    ]
+  },
+  {
+    "id": 1415,
+    "type": "noun",
+    "word": "Aufgabe",
+    "article": "die",
+    "plural": "Aufgaben",
+    "english": "task/exercise",
+    "level": "A1",
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": 1416,
+    "type": "noun",
+    "word": "Frage",
+    "article": "die",
+    "plural": "Fragen",
+    "english": "question",
+    "level": "A1",
+    "tags": [
+      "school",
+      "communication"
+    ]
+  },
+  {
+    "id": 1501,
+    "type": "noun",
+    "word": "Kopf",
+    "article": "der",
+    "plural": "Köpfe",
+    "english": "head",
+    "level": "A1",
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": 1502,
+    "type": "noun",
+    "word": "Auge",
+    "article": "das",
+    "plural": "Augen",
+    "english": "eye",
+    "level": "A1",
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": 1503,
+    "type": "noun",
+    "word": "Ohr",
+    "article": "das",
+    "plural": "Ohren",
+    "english": "ear",
+    "level": "A1",
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": 1504,
+    "type": "noun",
+    "word": "Nase",
+    "article": "die",
+    "plural": "Nasen",
+    "english": "nose",
+    "level": "A1",
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": 1505,
+    "type": "noun",
+    "word": "Mund",
+    "article": "der",
+    "plural": "Münder",
+    "english": "mouth",
+    "level": "A1",
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": 1506,
+    "type": "noun",
+    "word": "Hand",
+    "article": "die",
+    "plural": "Hände",
+    "english": "hand",
+    "level": "A1",
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": 1507,
+    "type": "noun",
+    "word": "Finger",
+    "article": "der",
+    "plural": "Finger",
+    "english": "finger",
+    "level": "A1",
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": 1508,
+    "type": "noun",
+    "word": "Arm",
+    "article": "der",
+    "plural": "Arme",
+    "english": "arm",
+    "level": "A1",
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": 1509,
+    "type": "noun",
+    "word": "Bein",
+    "article": "das",
+    "plural": "Beine",
+    "english": "leg",
+    "level": "A1",
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": 1510,
+    "type": "noun",
+    "word": "Fuß",
+    "article": "der",
+    "plural": "Füße",
+    "english": "foot",
+    "level": "A1",
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": 1511,
+    "type": "noun",
+    "word": "Bauch",
+    "article": "der",
+    "plural": "Bäuche",
+    "english": "belly",
+    "level": "A1",
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": 1512,
+    "type": "noun",
+    "word": "Rücken",
+    "article": "der",
+    "plural": "Rücken",
+    "english": "back",
+    "level": "A1",
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": 1601,
+    "type": "noun",
+    "word": "Auto",
+    "article": "das",
+    "plural": "Autos",
+    "english": "car",
+    "level": "A1",
+    "tags": [
+      "transport"
+    ]
+  },
+  {
+    "id": 1602,
+    "type": "noun",
+    "word": "Bus",
+    "article": "der",
+    "plural": "Busse",
+    "english": "bus",
+    "level": "A1",
+    "tags": [
+      "transport"
+    ]
+  },
+  {
+    "id": 1603,
+    "type": "noun",
+    "word": "Zug",
+    "article": "der",
+    "plural": "Züge",
+    "english": "train",
+    "level": "A1",
+    "tags": [
+      "transport"
+    ]
+  },
+  {
+    "id": 1604,
+    "type": "noun",
+    "word": "Fahrrad",
+    "article": "das",
+    "plural": "Fahrräder",
+    "english": "bicycle",
+    "level": "A1",
+    "tags": [
+      "transport"
+    ]
+  },
+  {
+    "id": 1605,
+    "type": "noun",
+    "word": "Flugzeug",
+    "article": "das",
+    "plural": "Flugzeuge",
+    "english": "airplane",
+    "level": "A1",
+    "tags": [
+      "transport"
+    ]
+  },
+  {
+    "id": 1606,
+    "type": "noun",
+    "word": "Schiff",
+    "article": "das",
+    "plural": "Schiffe",
+    "english": "ship",
+    "level": "A1",
+    "tags": [
+      "transport"
+    ]
+  },
+  {
+    "id": 1607,
+    "type": "noun",
+    "word": "Straße",
+    "article": "die",
+    "plural": "Straßen",
+    "english": "street",
+    "level": "A1",
+    "tags": [
+      "transport",
+      "city"
+    ]
+  },
+  {
+    "id": 1608,
+    "type": "noun",
+    "word": "Bahnhof",
+    "article": "der",
+    "plural": "Bahnhöfe",
+    "english": "train station",
+    "level": "A1",
+    "tags": [
+      "transport",
+      "city"
+    ]
+  },
+  {
+    "id": 1609,
+    "type": "noun",
+    "word": "Haltestelle",
+    "article": "die",
+    "plural": "Haltestellen",
+    "english": "stop/station",
+    "level": "A1",
+    "tags": [
+      "transport",
+      "city"
+    ]
+  },
+  {
+    "id": 1610,
+    "type": "noun",
+    "word": "Ampel",
+    "article": "die",
+    "plural": "Ampeln",
+    "english": "traffic light",
+    "level": "A1",
+    "tags": [
+      "transport",
+      "city"
+    ]
+  },
+  {
+    "id": 1701,
+    "type": "noun",
+    "word": "Tag",
+    "article": "der",
+    "plural": "Tage",
+    "english": "day",
+    "level": "A1",
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": 1702,
+    "type": "noun",
+    "word": "Nacht",
+    "article": "die",
+    "plural": "Nächte",
+    "english": "night",
+    "level": "A1",
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": 1703,
+    "type": "noun",
+    "word": "Morgen",
+    "article": "der",
+    "plural": "Morgen",
+    "english": "morning",
+    "level": "A1",
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": 1704,
+    "type": "noun",
+    "word": "Abend",
+    "article": "der",
+    "plural": "Abende",
+    "english": "evening",
+    "level": "A1",
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": 1705,
+    "type": "noun",
+    "word": "Woche",
+    "article": "die",
+    "plural": "Wochen",
+    "english": "week",
+    "level": "A1",
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": 1706,
+    "type": "noun",
+    "word": "Monat",
+    "article": "der",
+    "plural": "Monate",
+    "english": "month",
+    "level": "A1",
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": 1707,
+    "type": "noun",
+    "word": "Jahr",
+    "article": "das",
+    "plural": "Jahre",
+    "english": "year",
+    "level": "A1",
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": 1708,
+    "type": "noun",
+    "word": "Minute",
+    "article": "die",
+    "plural": "Minuten",
+    "english": "minute",
+    "level": "A1",
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": 1709,
+    "type": "noun",
+    "word": "Stunde",
+    "article": "die",
+    "plural": "Stunden",
+    "english": "hour",
+    "level": "A1",
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": 1801,
+    "type": "noun",
+    "word": "Sonne",
+    "article": "die",
+    "plural": "Sonnen",
+    "english": "sun",
+    "level": "A1",
+    "tags": [
+      "nature",
+      "weather"
+    ]
+  },
+  {
+    "id": 1802,
+    "type": "noun",
+    "word": "Mond",
+    "article": "der",
+    "plural": "Monde",
+    "english": "moon",
+    "level": "A1",
+    "tags": [
+      "nature"
+    ]
+  },
+  {
+    "id": 1803,
+    "type": "noun",
+    "word": "Stern",
+    "article": "der",
+    "plural": "Sterne",
+    "english": "star",
+    "level": "A1",
+    "tags": [
+      "nature"
+    ]
+  },
+  {
+    "id": 1804,
+    "type": "noun",
+    "word": "Himmel",
+    "article": "der",
+    "plural": "Himmel",
+    "english": "sky",
+    "level": "A1",
+    "tags": [
+      "nature"
+    ]
+  },
+  {
+    "id": 1805,
+    "type": "noun",
+    "word": "Wolke",
+    "article": "die",
+    "plural": "Wolken",
+    "english": "cloud",
+    "level": "A1",
+    "tags": [
+      "weather"
+    ]
+  },
+  {
+    "id": 1806,
+    "type": "noun",
+    "word": "Regen",
+    "article": "der",
+    "english": "rain",
+    "level": "A1",
+    "tags": [
+      "weather"
+    ]
+  },
+  {
+    "id": 1807,
+    "type": "noun",
+    "word": "Schnee",
+    "article": "der",
+    "english": "snow",
+    "level": "A1",
+    "tags": [
+      "weather"
+    ]
+  },
+  {
+    "id": 1808,
+    "type": "noun",
+    "word": "Wind",
+    "article": "der",
+    "plural": "Winde",
+    "english": "wind",
+    "level": "A1",
+    "tags": [
+      "weather"
+    ]
+  },
+  {
+    "id": 1809,
+    "type": "noun",
+    "word": "Baum",
+    "article": "der",
+    "plural": "Bäume",
+    "english": "tree",
+    "level": "A1",
+    "tags": [
+      "nature"
+    ]
+  },
+  {
+    "id": 1810,
+    "type": "noun",
+    "word": "Blume",
+    "article": "die",
+    "plural": "Blumen",
+    "english": "flower",
+    "level": "A1",
+    "tags": [
+      "nature"
+    ]
+  },
+  {
+    "id": 1811,
+    "type": "noun",
+    "word": "Berg",
+    "article": "der",
+    "plural": "Berge",
+    "english": "mountain",
+    "level": "A1",
+    "tags": [
+      "nature"
+    ]
+  },
+  {
+    "id": 1812,
+    "type": "noun",
+    "word": "Meer",
+    "article": "das",
+    "plural": "Meere",
+    "english": "sea",
+    "level": "A1",
+    "tags": [
+      "nature"
+    ]
+  },
+  {
+    "id": 1901,
+    "type": "noun",
+    "word": "Stadt",
+    "article": "die",
+    "plural": "Städte",
+    "english": "city",
+    "level": "A1",
+    "tags": [
+      "city"
+    ]
+  },
+  {
+    "id": 1902,
+    "type": "noun",
+    "word": "Dorf",
+    "article": "das",
+    "plural": "Dörfer",
+    "english": "village",
+    "level": "A1",
+    "tags": [
+      "city"
+    ]
+  },
+  {
+    "id": 1903,
+    "type": "noun",
+    "word": "Park",
+    "article": "der",
+    "plural": "Parks",
+    "english": "park",
+    "level": "A1",
+    "tags": [
+      "city"
+    ]
+  },
+  {
+    "id": 1904,
+    "type": "noun",
+    "word": "Laden",
+    "article": "der",
+    "plural": "Läden",
+    "english": "shop",
+    "level": "A1",
+    "tags": [
+      "city"
+    ]
+  },
+  {
+    "id": 1905,
+    "type": "noun",
+    "word": "Supermarkt",
+    "article": "der",
+    "plural": "Supermärkte",
+    "english": "supermarket",
+    "level": "A1",
+    "tags": [
+      "city",
+      "shopping"
+    ]
+  },
+  {
+    "id": 1906,
+    "type": "noun",
+    "word": "Bäckerei",
+    "article": "die",
+    "plural": "Bäckereien",
+    "english": "bakery",
+    "level": "A1",
+    "tags": [
+      "city",
+      "shopping",
+      "food"
+    ]
+  },
+  {
+    "id": 1907,
+    "type": "noun",
+    "word": "Restaurant",
+    "article": "das",
+    "plural": "Restaurants",
+    "english": "restaurant",
+    "level": "A1",
+    "tags": [
+      "city",
+      "food"
+    ]
+  },
+  {
+    "id": 1908,
+    "type": "noun",
+    "word": "Kino",
+    "article": "das",
+    "plural": "Kinos",
+    "english": "cinema",
+    "level": "A1",
+    "tags": [
+      "city",
+      "fun"
+    ]
+  },
+  {
+    "id": 1909,
+    "type": "noun",
+    "word": "Museum",
+    "article": "das",
+    "plural": "Museen",
+    "english": "museum",
+    "level": "A1",
+    "tags": [
+      "city",
+      "culture"
+    ]
+  },
+  {
+    "id": 1910,
+    "type": "noun",
+    "word": "Krankenhaus",
+    "article": "das",
+    "plural": "Krankenhäuser",
+    "english": "hospital",
+    "level": "A1",
+    "tags": [
+      "city"
+    ]
+  },
+  {
+    "id": 2001,
+    "type": "verb",
+    "word": "sein",
+    "english": "to be",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "core"
+    ]
+  },
+  {
+    "id": 2002,
+    "type": "verb",
+    "word": "haben",
+    "english": "to have",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "core"
+    ]
+  },
+  {
+    "id": 2003,
     "type": "verb",
     "word": "gehen",
     "english": "to go",
     "level": "A1",
-    "tags": ["verbs", "movement"]
+    "tags": [
+      "verbs",
+      "movement"
+    ]
   },
   {
-    "id": 1302,
+    "id": 2004,
     "type": "verb",
-    "word": "essen",
-    "english": "to eat",
+    "word": "kommen",
+    "english": "to come",
     "level": "A1",
-    "tags": ["verbs", "food"]
+    "tags": [
+      "verbs",
+      "movement"
+    ]
   },
   {
-    "id": 1303,
+    "id": 2005,
     "type": "verb",
-    "word": "trinken",
-    "english": "to drink",
+    "word": "machen",
+    "english": "to do/make",
     "level": "A1",
-    "tags": ["verbs", "food"]
+    "tags": [
+      "verbs",
+      "core"
+    ]
   },
   {
-    "id": 1304,
+    "id": 2006,
+    "type": "verb",
+    "word": "sehen",
+    "english": "to see",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "senses"
+    ]
+  },
+  {
+    "id": 2007,
+    "type": "verb",
+    "word": "hören",
+    "english": "to hear/listen",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "senses"
+    ]
+  },
+  {
+    "id": 2008,
+    "type": "verb",
+    "word": "sprechen",
+    "english": "to speak",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "communication"
+    ]
+  },
+  {
+    "id": 2009,
+    "type": "verb",
+    "word": "sagen",
+    "english": "to say",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "communication"
+    ]
+  },
+  {
+    "id": 2010,
+    "type": "verb",
+    "word": "fragen",
+    "english": "to ask",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "communication"
+    ]
+  },
+  {
+    "id": 2011,
+    "type": "verb",
+    "word": "antworten",
+    "english": "to answer",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "communication"
+    ]
+  },
+  {
+    "id": 2012,
+    "type": "verb",
+    "word": "lernen",
+    "english": "to learn",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "school"
+    ]
+  },
+  {
+    "id": 2013,
+    "type": "verb",
+    "word": "lesen",
+    "english": "to read",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "school"
+    ]
+  },
+  {
+    "id": 2014,
+    "type": "verb",
+    "word": "schreiben",
+    "english": "to write",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "school"
+    ]
+  },
+  {
+    "id": 2015,
     "type": "verb",
     "word": "spielen",
     "english": "to play",
     "level": "A1",
-    "tags": ["verbs", "kids"]
+    "tags": [
+      "verbs",
+      "kids"
+    ]
   },
   {
-    "id": 1401,
+    "id": 2016,
+    "type": "verb",
+    "word": "essen",
+    "english": "to eat",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "food"
+    ]
+  },
+  {
+    "id": 2017,
+    "type": "verb",
+    "word": "trinken",
+    "english": "to drink",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "food"
+    ]
+  },
+  {
+    "id": 2018,
+    "type": "verb",
+    "word": "schlafen",
+    "english": "to sleep",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "daily"
+    ]
+  },
+  {
+    "id": 2019,
+    "type": "verb",
+    "word": "laufen",
+    "english": "to run/walk",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "movement"
+    ]
+  },
+  {
+    "id": 2020,
+    "type": "verb",
+    "word": "springen",
+    "english": "to jump",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "movement"
+    ]
+  },
+  {
+    "id": 2021,
+    "type": "verb",
+    "word": "sitzen",
+    "english": "to sit",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "position"
+    ]
+  },
+  {
+    "id": 2022,
+    "type": "verb",
+    "word": "stehen",
+    "english": "to stand",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "position"
+    ]
+  },
+  {
+    "id": 2023,
+    "type": "verb",
+    "word": "liegen",
+    "english": "to lie",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "position"
+    ]
+  },
+  {
+    "id": 2024,
+    "type": "verb",
+    "word": "geben",
+    "english": "to give",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "core"
+    ]
+  },
+  {
+    "id": 2025,
+    "type": "verb",
+    "word": "nehmen",
+    "english": "to take",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "core"
+    ]
+  },
+  {
+    "id": 2026,
+    "type": "verb",
+    "word": "kaufen",
+    "english": "to buy",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "shopping"
+    ]
+  },
+  {
+    "id": 2027,
+    "type": "verb",
+    "word": "bezahlen",
+    "english": "to pay",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "shopping"
+    ]
+  },
+  {
+    "id": 2028,
+    "type": "verb",
+    "word": "finden",
+    "english": "to find",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "core"
+    ]
+  },
+  {
+    "id": 2029,
+    "type": "verb",
+    "word": "suchen",
+    "english": "to search/look for",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "core"
+    ]
+  },
+  {
+    "id": 2030,
+    "type": "verb",
+    "word": "brauchen",
+    "english": "to need",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "core"
+    ]
+  },
+  {
+    "id": 2031,
+    "type": "verb",
+    "word": "wollen",
+    "english": "to want",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "modal"
+    ]
+  },
+  {
+    "id": 2032,
+    "type": "verb",
+    "word": "können",
+    "english": "to be able to/can",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "modal"
+    ]
+  },
+  {
+    "id": 2033,
+    "type": "verb",
+    "word": "müssen",
+    "english": "to have to/must",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "modal"
+    ]
+  },
+  {
+    "id": 2034,
+    "type": "verb",
+    "word": "dürfen",
+    "english": "to be allowed to/may",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "modal"
+    ]
+  },
+  {
+    "id": 2035,
+    "type": "verb",
+    "word": "mögen",
+    "english": "to like",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "feelings"
+    ]
+  },
+  {
+    "id": 2036,
+    "type": "verb",
+    "word": "lieben",
+    "english": "to love",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "feelings"
+    ]
+  },
+  {
+    "id": 2037,
+    "type": "verb",
+    "word": "helfen",
+    "english": "to help",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "social"
+    ]
+  },
+  {
+    "id": 2038,
+    "type": "verb",
+    "word": "öffnen",
+    "english": "to open",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "actions"
+    ]
+  },
+  {
+    "id": 2039,
+    "type": "verb",
+    "word": "schließen",
+    "english": "to close",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "actions"
+    ]
+  },
+  {
+    "id": 2040,
+    "type": "verb",
+    "word": "waschen",
+    "english": "to wash",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "daily"
+    ]
+  },
+  {
+    "id": 2041,
+    "type": "verb",
+    "word": "ziehen",
+    "english": "to pull/move",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "actions"
+    ]
+  },
+  {
+    "id": 2042,
+    "type": "verb",
+    "word": "tragen",
+    "english": "to carry/wear",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "actions",
+      "clothes"
+    ]
+  },
+  {
+    "id": 2043,
+    "type": "verb",
+    "word": "fahren",
+    "english": "to drive/ride",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "transport"
+    ]
+  },
+  {
+    "id": 2044,
+    "type": "verb",
+    "word": "fliegen",
+    "english": "to fly",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "transport"
+    ]
+  },
+  {
+    "id": 2045,
+    "type": "verb",
+    "word": "kochen",
+    "english": "to cook",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "food"
+    ]
+  },
+  {
+    "id": 2046,
+    "type": "verb",
+    "word": "backen",
+    "english": "to bake",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "food"
+    ]
+  },
+  {
+    "id": 2047,
+    "type": "verb",
+    "word": "malen",
+    "english": "to paint/draw",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "arts"
+    ]
+  },
+  {
+    "id": 2048,
+    "type": "verb",
+    "word": "zeichnen",
+    "english": "to draw",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "arts"
+    ]
+  },
+  {
+    "id": 2049,
+    "type": "verb",
+    "word": "arbeiten",
+    "english": "to work",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "jobs"
+    ]
+  },
+  {
+    "id": 2050,
+    "type": "verb",
+    "word": "warten",
+    "english": "to wait",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "time"
+    ]
+  },
+  {
+    "id": 2051,
+    "type": "verb",
+    "word": "beginnen",
+    "english": "to begin",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "time"
+    ]
+  },
+  {
+    "id": 2052,
+    "type": "verb",
+    "word": "enden",
+    "english": "to end",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "time"
+    ]
+  },
+  {
+    "id": 2053,
+    "type": "verb",
+    "word": "gewinnen",
+    "english": "to win",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "games"
+    ]
+  },
+  {
+    "id": 2054,
+    "type": "verb",
+    "word": "verlieren",
+    "english": "to lose",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "games"
+    ]
+  },
+  {
+    "id": 2055,
+    "type": "verb",
+    "word": "denken",
+    "english": "to think",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "mind"
+    ]
+  },
+  {
+    "id": 2056,
+    "type": "verb",
+    "word": "wissen",
+    "english": "to know (a fact)",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "mind"
+    ]
+  },
+  {
+    "id": 2057,
+    "type": "verb",
+    "word": "kennen",
+    "english": "to know (be familiar with)",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "mind"
+    ]
+  },
+  {
+    "id": 2058,
+    "type": "verb",
+    "word": "verstehen",
+    "english": "to understand",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "mind"
+    ]
+  },
+  {
+    "id": 2059,
+    "type": "verb",
+    "word": "vergessen",
+    "english": "to forget",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "mind"
+    ]
+  },
+  {
+    "id": 2060,
+    "type": "verb",
+    "word": "erinnern",
+    "english": "to remember",
+    "level": "A1",
+    "tags": [
+      "verbs",
+      "mind"
+    ]
+  },
+  {
+    "id": 3001,
     "type": "adjective",
     "word": "groß",
     "english": "big",
     "level": "A1",
-    "tags": ["adjectives"]
+    "tags": [
+      "adjectives",
+      "size"
+    ]
   },
   {
-    "id": 1402,
+    "id": 3002,
     "type": "adjective",
     "word": "klein",
     "english": "small",
     "level": "A1",
-    "tags": ["adjectives"]
+    "tags": [
+      "adjectives",
+      "size"
+    ]
   },
   {
-    "id": 1403,
+    "id": 3003,
+    "type": "adjective",
+    "word": "lang",
+    "english": "long",
+    "level": "A1",
+    "tags": [
+      "adjectives",
+      "size"
+    ]
+  },
+  {
+    "id": 3004,
+    "type": "adjective",
+    "word": "kurz",
+    "english": "short",
+    "level": "A1",
+    "tags": [
+      "adjectives",
+      "size"
+    ]
+  },
+  {
+    "id": 3005,
+    "type": "adjective",
+    "word": "alt",
+    "english": "old",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3006,
+    "type": "adjective",
+    "word": "jung",
+    "english": "young",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3007,
+    "type": "adjective",
+    "word": "neu",
+    "english": "new",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3008,
     "type": "adjective",
     "word": "gut",
     "english": "good",
     "level": "A1",
-    "tags": ["adjectives"]
+    "tags": [
+      "adjectives"
+    ]
   },
   {
-    "id": 1404,
+    "id": 3009,
     "type": "adjective",
     "word": "schlecht",
     "english": "bad",
     "level": "A1",
-    "tags": ["adjectives"]
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3010,
+    "type": "adjective",
+    "word": "schön",
+    "english": "beautiful/nice",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3011,
+    "type": "adjective",
+    "word": "hässlich",
+    "english": "ugly",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3012,
+    "type": "adjective",
+    "word": "schnell",
+    "english": "fast",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3013,
+    "type": "adjective",
+    "word": "langsam",
+    "english": "slow",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3014,
+    "type": "adjective",
+    "word": "warm",
+    "english": "warm",
+    "level": "A1",
+    "tags": [
+      "adjectives",
+      "weather"
+    ]
+  },
+  {
+    "id": 3015,
+    "type": "adjective",
+    "word": "kalt",
+    "english": "cold",
+    "level": "A1",
+    "tags": [
+      "adjectives",
+      "weather"
+    ]
+  },
+  {
+    "id": 3016,
+    "type": "adjective",
+    "word": "heiß",
+    "english": "hot",
+    "level": "A1",
+    "tags": [
+      "adjectives",
+      "weather"
+    ]
+  },
+  {
+    "id": 3017,
+    "type": "adjective",
+    "word": "leicht",
+    "english": "light/easy",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3018,
+    "type": "adjective",
+    "word": "schwer",
+    "english": "heavy/difficult",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3019,
+    "type": "adjective",
+    "word": "hell",
+    "english": "bright",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3020,
+    "type": "adjective",
+    "word": "dunkel",
+    "english": "dark",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3021,
+    "type": "adjective",
+    "word": "laut",
+    "english": "loud",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3022,
+    "type": "adjective",
+    "word": "leise",
+    "english": "quiet",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3023,
+    "type": "adjective",
+    "word": "sauber",
+    "english": "clean",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3024,
+    "type": "adjective",
+    "word": "schmutzig",
+    "english": "dirty",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3025,
+    "type": "adjective",
+    "word": "voll",
+    "english": "full",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3026,
+    "type": "adjective",
+    "word": "leer",
+    "english": "empty",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3027,
+    "type": "adjective",
+    "word": "richtig",
+    "english": "correct/right",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3028,
+    "type": "adjective",
+    "word": "falsch",
+    "english": "wrong",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3029,
+    "type": "adjective",
+    "word": "glücklich",
+    "english": "happy",
+    "level": "A1",
+    "tags": [
+      "adjectives",
+      "feelings"
+    ]
+  },
+  {
+    "id": 3030,
+    "type": "adjective",
+    "word": "traurig",
+    "english": "sad",
+    "level": "A1",
+    "tags": [
+      "adjectives",
+      "feelings"
+    ]
+  },
+  {
+    "id": 3031,
+    "type": "adjective",
+    "word": "müde",
+    "english": "tired",
+    "level": "A1",
+    "tags": [
+      "adjectives",
+      "feelings"
+    ]
+  },
+  {
+    "id": 3032,
+    "type": "adjective",
+    "word": "krank",
+    "english": "sick",
+    "level": "A1",
+    "tags": [
+      "adjectives",
+      "health"
+    ]
+  },
+  {
+    "id": 3033,
+    "type": "adjective",
+    "word": "gesund",
+    "english": "healthy",
+    "level": "A1",
+    "tags": [
+      "adjectives",
+      "health"
+    ]
+  },
+  {
+    "id": 3034,
+    "type": "adjective",
+    "word": "hungrig",
+    "english": "hungry",
+    "level": "A1",
+    "tags": [
+      "adjectives",
+      "feelings"
+    ]
+  },
+  {
+    "id": 3035,
+    "type": "adjective",
+    "word": "durstig",
+    "english": "thirsty",
+    "level": "A1",
+    "tags": [
+      "adjectives",
+      "feelings"
+    ]
+  },
+  {
+    "id": 3036,
+    "type": "adjective",
+    "word": "freundlich",
+    "english": "friendly",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3037,
+    "type": "adjective",
+    "word": "lustig",
+    "english": "funny",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3038,
+    "type": "adjective",
+    "word": "langweilig",
+    "english": "boring",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3039,
+    "type": "adjective",
+    "word": "einfach",
+    "english": "simple/easy",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3040,
+    "type": "adjective",
+    "word": "schwierig",
+    "english": "difficult",
+    "level": "A1",
+    "tags": [
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3101,
+    "type": "adjective",
+    "word": "rot",
+    "english": "red",
+    "level": "A1",
+    "tags": [
+      "colors",
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3102,
+    "type": "adjective",
+    "word": "blau",
+    "english": "blue",
+    "level": "A1",
+    "tags": [
+      "colors",
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3103,
+    "type": "adjective",
+    "word": "grün",
+    "english": "green",
+    "level": "A1",
+    "tags": [
+      "colors",
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3104,
+    "type": "adjective",
+    "word": "gelb",
+    "english": "yellow",
+    "level": "A1",
+    "tags": [
+      "colors",
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3105,
+    "type": "adjective",
+    "word": "schwarz",
+    "english": "black",
+    "level": "A1",
+    "tags": [
+      "colors",
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3106,
+    "type": "adjective",
+    "word": "weiß",
+    "english": "white",
+    "level": "A1",
+    "tags": [
+      "colors",
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3107,
+    "type": "adjective",
+    "word": "braun",
+    "english": "brown",
+    "level": "A1",
+    "tags": [
+      "colors",
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3108,
+    "type": "adjective",
+    "word": "rosa",
+    "english": "pink",
+    "level": "A1",
+    "tags": [
+      "colors",
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3109,
+    "type": "adjective",
+    "word": "lila",
+    "english": "purple",
+    "level": "A1",
+    "tags": [
+      "colors",
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3110,
+    "type": "adjective",
+    "word": "orange",
+    "english": "orange",
+    "level": "A1",
+    "tags": [
+      "colors",
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3111,
+    "type": "adjective",
+    "word": "grau",
+    "english": "grey",
+    "level": "A1",
+    "tags": [
+      "colors",
+      "adjectives"
+    ]
+  },
+  {
+    "id": 3200,
+    "type": "number",
+    "word": "null",
+    "english": "zero",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3201,
+    "type": "number",
+    "word": "eins",
+    "english": "one",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3202,
+    "type": "number",
+    "word": "zwei",
+    "english": "two",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3203,
+    "type": "number",
+    "word": "drei",
+    "english": "three",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3204,
+    "type": "number",
+    "word": "vier",
+    "english": "four",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3205,
+    "type": "number",
+    "word": "fünf",
+    "english": "five",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3206,
+    "type": "number",
+    "word": "sechs",
+    "english": "six",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3207,
+    "type": "number",
+    "word": "sieben",
+    "english": "seven",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3208,
+    "type": "number",
+    "word": "acht",
+    "english": "eight",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3209,
+    "type": "number",
+    "word": "neun",
+    "english": "nine",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3210,
+    "type": "number",
+    "word": "zehn",
+    "english": "ten",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3211,
+    "type": "number",
+    "word": "elf",
+    "english": "eleven",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3212,
+    "type": "number",
+    "word": "zwölf",
+    "english": "twelve",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3213,
+    "type": "number",
+    "word": "dreizehn",
+    "english": "thirteen",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3214,
+    "type": "number",
+    "word": "vierzehn",
+    "english": "fourteen",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3215,
+    "type": "number",
+    "word": "fünfzehn",
+    "english": "fifteen",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3216,
+    "type": "number",
+    "word": "sechzehn",
+    "english": "sixteen",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3217,
+    "type": "number",
+    "word": "siebzehn",
+    "english": "seventeen",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3218,
+    "type": "number",
+    "word": "achtzehn",
+    "english": "eighteen",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3219,
+    "type": "number",
+    "word": "neunzehn",
+    "english": "nineteen",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 3220,
+    "type": "number",
+    "word": "zwanzig",
+    "english": "twenty",
+    "level": "A1",
+    "tags": [
+      "numbers"
+    ]
+  },
+  {
+    "id": 4001,
+    "type": "phrase",
+    "word": "Hallo!",
+    "english": "Hello!",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "greetings"
+    ]
+  },
+  {
+    "id": 4002,
+    "type": "phrase",
+    "word": "Guten Morgen!",
+    "english": "Good morning!",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "greetings"
+    ]
+  },
+  {
+    "id": 4003,
+    "type": "phrase",
+    "word": "Guten Tag!",
+    "english": "Good day!",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "greetings"
+    ]
+  },
+  {
+    "id": 4004,
+    "type": "phrase",
+    "word": "Guten Abend!",
+    "english": "Good evening!",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "greetings"
+    ]
+  },
+  {
+    "id": 4005,
+    "type": "phrase",
+    "word": "Tschüss!",
+    "english": "Bye!",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "greetings"
+    ]
+  },
+  {
+    "id": 4006,
+    "type": "phrase",
+    "word": "Bis später!",
+    "english": "See you later!",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "greetings"
+    ]
+  },
+  {
+    "id": 4007,
+    "type": "phrase",
+    "word": "Bitte.",
+    "english": "Please./You are welcome.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "polite"
+    ]
+  },
+  {
+    "id": 4008,
+    "type": "phrase",
+    "word": "Danke.",
+    "english": "Thank you.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "polite"
+    ]
+  },
+  {
+    "id": 4009,
+    "type": "phrase",
+    "word": "Entschuldigung.",
+    "english": "Excuse me./Sorry.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "polite"
+    ]
+  },
+  {
+    "id": 4010,
+    "type": "phrase",
+    "word": "Ja.",
+    "english": "Yes.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "core"
+    ]
+  },
+  {
+    "id": 4011,
+    "type": "phrase",
+    "word": "Nein.",
+    "english": "No.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "core"
+    ]
+  },
+  {
+    "id": 4012,
+    "type": "phrase",
+    "word": "Ich weiß nicht.",
+    "english": "I do not know.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "core"
+    ]
+  },
+  {
+    "id": 4013,
+    "type": "phrase",
+    "word": "Ich verstehe.",
+    "english": "I understand.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "core"
+    ]
+  },
+  {
+    "id": 4014,
+    "type": "phrase",
+    "word": "Ich verstehe nicht.",
+    "english": "I do not understand.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "core"
+    ]
+  },
+  {
+    "id": 4015,
+    "type": "phrase",
+    "word": "Wie heißt du?",
+    "english": "What is your name?",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "introductions"
+    ]
+  },
+  {
+    "id": 4016,
+    "type": "phrase",
+    "word": "Ich heiße ...",
+    "english": "My name is ...",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "introductions"
+    ]
+  },
+  {
+    "id": 4017,
+    "type": "phrase",
+    "word": "Wie geht es dir?",
+    "english": "How are you?",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "feelings"
+    ]
+  },
+  {
+    "id": 4018,
+    "type": "phrase",
+    "word": "Mir geht es gut.",
+    "english": "I am doing well.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "feelings"
+    ]
+  },
+  {
+    "id": 4019,
+    "type": "phrase",
+    "word": "Ich bin müde.",
+    "english": "I am tired.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "feelings"
+    ]
+  },
+  {
+    "id": 4020,
+    "type": "phrase",
+    "word": "Ich habe Hunger.",
+    "english": "I am hungry.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "feelings"
+    ]
+  },
+  {
+    "id": 4021,
+    "type": "phrase",
+    "word": "Ich habe Durst.",
+    "english": "I am thirsty.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "feelings"
+    ]
+  },
+  {
+    "id": 4022,
+    "type": "phrase",
+    "word": "Wo ist ...?",
+    "english": "Where is ...?",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "questions"
+    ]
+  },
+  {
+    "id": 4023,
+    "type": "phrase",
+    "word": "Was ist das?",
+    "english": "What is that?",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "questions"
+    ]
+  },
+  {
+    "id": 4024,
+    "type": "phrase",
+    "word": "Kannst du mir helfen?",
+    "english": "Can you help me?",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "questions"
+    ]
+  },
+  {
+    "id": 4025,
+    "type": "phrase",
+    "word": "Ich möchte Wasser.",
+    "english": "I would like water.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "food"
+    ]
+  },
+  {
+    "id": 4026,
+    "type": "phrase",
+    "word": "Ich mag das.",
+    "english": "I like that.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "opinions"
+    ]
+  },
+  {
+    "id": 4027,
+    "type": "phrase",
+    "word": "Ich mag das nicht.",
+    "english": "I do not like that.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "opinions"
+    ]
+  },
+  {
+    "id": 4028,
+    "type": "phrase",
+    "word": "Das ist gut.",
+    "english": "That is good.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "opinions"
+    ]
+  },
+  {
+    "id": 4029,
+    "type": "phrase",
+    "word": "Das ist schwer.",
+    "english": "That is difficult/heavy.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "opinions"
+    ]
+  },
+  {
+    "id": 4030,
+    "type": "phrase",
+    "word": "Noch einmal, bitte.",
+    "english": "One more time, please.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "classroom"
+    ]
+  },
+  {
+    "id": 4031,
+    "type": "phrase",
+    "word": "Langsamer, bitte.",
+    "english": "Slower, please.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "classroom"
+    ]
+  },
+  {
+    "id": 4032,
+    "type": "phrase",
+    "word": "Ich bin fertig.",
+    "english": "I am finished.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "classroom"
+    ]
+  },
+  {
+    "id": 4033,
+    "type": "phrase",
+    "word": "Darf ich gehen?",
+    "english": "May I go?",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "classroom"
+    ]
+  },
+  {
+    "id": 4034,
+    "type": "phrase",
+    "word": "Ich brauche Hilfe.",
+    "english": "I need help.",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "classroom"
+    ]
+  },
+  {
+    "id": 4035,
+    "type": "phrase",
+    "word": "Sehr gut!",
+    "english": "Very good!",
+    "level": "A1",
+    "tags": [
+      "phrases",
+      "praise"
+    ]
+  },
+  {
+    "id": 5001,
+    "type": "pronoun",
+    "word": "ich",
+    "english": "I",
+    "level": "A1",
+    "tags": [
+      "pronouns"
+    ]
+  },
+  {
+    "id": 5002,
+    "type": "pronoun",
+    "word": "du",
+    "english": "you (informal singular)",
+    "level": "A1",
+    "tags": [
+      "pronouns"
+    ]
+  },
+  {
+    "id": 5003,
+    "type": "pronoun",
+    "word": "er",
+    "english": "he",
+    "level": "A1",
+    "tags": [
+      "pronouns"
+    ]
+  },
+  {
+    "id": 5004,
+    "type": "pronoun",
+    "word": "sie",
+    "english": "she/they",
+    "level": "A1",
+    "tags": [
+      "pronouns"
+    ]
+  },
+  {
+    "id": 5005,
+    "type": "pronoun",
+    "word": "es",
+    "english": "it",
+    "level": "A1",
+    "tags": [
+      "pronouns"
+    ]
+  },
+  {
+    "id": 5006,
+    "type": "pronoun",
+    "word": "wir",
+    "english": "we",
+    "level": "A1",
+    "tags": [
+      "pronouns"
+    ]
+  },
+  {
+    "id": 5007,
+    "type": "pronoun",
+    "word": "ihr",
+    "english": "you (informal plural)",
+    "level": "A1",
+    "tags": [
+      "pronouns"
+    ]
+  },
+  {
+    "id": 5008,
+    "type": "pronoun",
+    "word": "Sie",
+    "english": "you (formal)",
+    "level": "A1",
+    "tags": [
+      "pronouns"
+    ]
+  },
+  {
+    "id": 5010,
+    "type": "possessive",
+    "word": "mein",
+    "english": "my",
+    "level": "A1",
+    "tags": [
+      "pronouns",
+      "possessives"
+    ]
+  },
+  {
+    "id": 5011,
+    "type": "possessive",
+    "word": "dein",
+    "english": "your",
+    "level": "A1",
+    "tags": [
+      "pronouns",
+      "possessives"
+    ]
+  },
+  {
+    "id": 5012,
+    "type": "possessive",
+    "word": "sein",
+    "english": "his/its",
+    "level": "A1",
+    "tags": [
+      "pronouns",
+      "possessives"
+    ]
+  },
+  {
+    "id": 5013,
+    "type": "possessive",
+    "word": "ihr",
+    "english": "her/their",
+    "level": "A1",
+    "tags": [
+      "pronouns",
+      "possessives"
+    ]
+  },
+  {
+    "id": 5020,
+    "type": "preposition",
+    "word": "in",
+    "english": "in",
+    "level": "A1",
+    "tags": [
+      "prepositions"
+    ]
+  },
+  {
+    "id": 5021,
+    "type": "preposition",
+    "word": "auf",
+    "english": "on",
+    "level": "A1",
+    "tags": [
+      "prepositions"
+    ]
+  },
+  {
+    "id": 5022,
+    "type": "preposition",
+    "word": "unter",
+    "english": "under",
+    "level": "A1",
+    "tags": [
+      "prepositions"
+    ]
+  },
+  {
+    "id": 5023,
+    "type": "preposition",
+    "word": "über",
+    "english": "over/about",
+    "level": "A1",
+    "tags": [
+      "prepositions"
+    ]
+  },
+  {
+    "id": 5024,
+    "type": "preposition",
+    "word": "neben",
+    "english": "next to",
+    "level": "A1",
+    "tags": [
+      "prepositions"
+    ]
+  },
+  {
+    "id": 5025,
+    "type": "preposition",
+    "word": "vor",
+    "english": "in front of/before",
+    "level": "A1",
+    "tags": [
+      "prepositions"
+    ]
+  },
+  {
+    "id": 5026,
+    "type": "preposition",
+    "word": "hinter",
+    "english": "behind",
+    "level": "A1",
+    "tags": [
+      "prepositions"
+    ]
+  },
+  {
+    "id": 5027,
+    "type": "preposition",
+    "word": "mit",
+    "english": "with",
+    "level": "A1",
+    "tags": [
+      "prepositions"
+    ]
+  },
+  {
+    "id": 5028,
+    "type": "preposition",
+    "word": "ohne",
+    "english": "without",
+    "level": "A1",
+    "tags": [
+      "prepositions"
+    ]
+  },
+  {
+    "id": 5029,
+    "type": "preposition",
+    "word": "für",
+    "english": "for",
+    "level": "A1",
+    "tags": [
+      "prepositions"
+    ]
+  },
+  {
+    "id": 5030,
+    "type": "conjunction",
+    "word": "und",
+    "english": "and",
+    "level": "A1",
+    "tags": [
+      "connectors"
+    ]
+  },
+  {
+    "id": 5031,
+    "type": "conjunction",
+    "word": "oder",
+    "english": "or",
+    "level": "A1",
+    "tags": [
+      "connectors"
+    ]
+  },
+  {
+    "id": 5032,
+    "type": "conjunction",
+    "word": "aber",
+    "english": "but",
+    "level": "A1",
+    "tags": [
+      "connectors"
+    ]
+  },
+  {
+    "id": 5033,
+    "type": "conjunction",
+    "word": "weil",
+    "english": "because",
+    "level": "A1",
+    "tags": [
+      "connectors"
+    ]
+  },
+  {
+    "id": 5040,
+    "type": "adverb",
+    "word": "heute",
+    "english": "today",
+    "level": "A1",
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": 5041,
+    "type": "adverb",
+    "word": "morgen",
+    "english": "tomorrow",
+    "level": "A1",
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": 5042,
+    "type": "adverb",
+    "word": "gestern",
+    "english": "yesterday",
+    "level": "A1",
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": 5043,
+    "type": "adverb",
+    "word": "jetzt",
+    "english": "now",
+    "level": "A1",
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": 5044,
+    "type": "adverb",
+    "word": "später",
+    "english": "later",
+    "level": "A1",
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": 5045,
+    "type": "adverb",
+    "word": "hier",
+    "english": "here",
+    "level": "A1",
+    "tags": [
+      "place"
+    ]
+  },
+  {
+    "id": 5046,
+    "type": "adverb",
+    "word": "dort",
+    "english": "there",
+    "level": "A1",
+    "tags": [
+      "place"
+    ]
+  },
+  {
+    "id": 5047,
+    "type": "adverb",
+    "word": "immer",
+    "english": "always",
+    "level": "A1",
+    "tags": [
+      "frequency"
+    ]
+  },
+  {
+    "id": 5048,
+    "type": "adverb",
+    "word": "nie",
+    "english": "never",
+    "level": "A1",
+    "tags": [
+      "frequency"
+    ]
+  },
+  {
+    "id": 5049,
+    "type": "adverb",
+    "word": "manchmal",
+    "english": "sometimes",
+    "level": "A1",
+    "tags": [
+      "frequency"
+    ]
   }
 ]
